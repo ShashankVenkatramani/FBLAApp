@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		D50F98E523FF1AE80023BE76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50F98E423FF1AE80023BE76 /* AppDelegate.swift */; };
 		D50F98E723FF1AE80023BE76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50F98E623FF1AE80023BE76 /* SceneDelegate.swift */; };
-		D50F98E923FF1AE80023BE76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50F98E823FF1AE80023BE76 /* ViewController.swift */; };
 		D50F98EC23FF1AE80023BE76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50F98EA23FF1AE80023BE76 /* Main.storyboard */; };
 		D50F98EF23FF1AE80023BE76 /* FBLAApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D50F98ED23FF1AE80023BE76 /* FBLAApp.xcdatamodeld */; };
 		D50F98F123FF1AEA0023BE76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50F98F023FF1AEA0023BE76 /* Assets.xcassets */; };
 		D50F98F423FF1AEA0023BE76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50F98F223FF1AEA0023BE76 /* LaunchScreen.storyboard */; };
+		D50F98FC23FF92430023BE76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50F98FB23FF92430023BE76 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D50F98E123FF1AE80023BE76 /* FBLAApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBLAApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50F98E423FF1AE80023BE76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D50F98E623FF1AE80023BE76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D50F98E823FF1AE80023BE76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D50F98EB23FF1AE80023BE76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D50F98EE23FF1AE80023BE76 /* FBLAApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FBLAApp.xcdatamodel; sourceTree = "<group>"; };
 		D50F98F023FF1AEA0023BE76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D50F98F323FF1AEA0023BE76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D50F98F523FF1AEA0023BE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D50F98FB23FF92430023BE76 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			children = (
 				D50F98E423FF1AE80023BE76 /* AppDelegate.swift */,
 				D50F98E623FF1AE80023BE76 /* SceneDelegate.swift */,
-				D50F98E823FF1AE80023BE76 /* ViewController.swift */,
+				D50F98FB23FF92430023BE76 /* LoginViewController.swift */,
 				D50F98EA23FF1AE80023BE76 /* Main.storyboard */,
 				D50F98F023FF1AEA0023BE76 /* Assets.xcassets */,
 				D50F98F223FF1AEA0023BE76 /* LaunchScreen.storyboard */,
@@ -141,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D50F98E923FF1AE80023BE76 /* ViewController.swift in Sources */,
+				D50F98FC23FF92430023BE76 /* LoginViewController.swift in Sources */,
 				D50F98E523FF1AE80023BE76 /* AppDelegate.swift in Sources */,
 				D50F98EF23FF1AE80023BE76 /* FBLAApp.xcdatamodeld in Sources */,
 				D50F98E723FF1AE80023BE76 /* SceneDelegate.swift in Sources */,
