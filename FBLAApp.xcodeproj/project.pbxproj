@@ -16,6 +16,12 @@
 		D50F98F423FF1AEA0023BE76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50F98F223FF1AEA0023BE76 /* LaunchScreen.storyboard */; };
 		D50F98FC23FF92430023BE76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50F98FB23FF92430023BE76 /* LoginViewController.swift */; };
 		D50F98FE23FF95980023BE76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D50F98FD23FF95980023BE76 /* GoogleService-Info.plist */; };
+		D5BB3F2D2400CAA400646B5E /* StudentTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB3F2C2400CAA400646B5E /* StudentTestViewController.swift */; };
+		D5BB3F2F2400CAAE00646B5E /* ChapterTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB3F2E2400CAAE00646B5E /* ChapterTestViewController.swift */; };
+		D5BB3F312400CE6300646B5E /* UIDGuardedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB3F302400CE6300646B5E /* UIDGuardedViewController.swift */; };
+		D5BB3F332400D34600646B5E /* ScanClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB3F322400D34600646B5E /* ScanClassViewController.swift */; };
+		D5ED13322400A9E10072705C /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED13312400A9E10072705C /* RegisterUserViewController.swift */; };
+		D5ED13342400AA230072705C /* RegisterChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED13332400AA230072705C /* RegisterChapterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		D50F98F523FF1AEA0023BE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D50F98FB23FF92430023BE76 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D50F98FD23FF95980023BE76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D5BB3F2C2400CAA400646B5E /* StudentTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTestViewController.swift; sourceTree = "<group>"; };
+		D5BB3F2E2400CAAE00646B5E /* ChapterTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterTestViewController.swift; sourceTree = "<group>"; };
+		D5BB3F302400CE6300646B5E /* UIDGuardedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDGuardedViewController.swift; sourceTree = "<group>"; };
+		D5BB3F322400D34600646B5E /* ScanClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanClassViewController.swift; sourceTree = "<group>"; };
+		D5ED13312400A9E10072705C /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
+		D5ED13332400AA230072705C /* RegisterChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterChapterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +99,12 @@
 				D50F98E423FF1AE80023BE76 /* AppDelegate.swift */,
 				D50F98E623FF1AE80023BE76 /* SceneDelegate.swift */,
 				D50F98FB23FF92430023BE76 /* LoginViewController.swift */,
+				D5ED13312400A9E10072705C /* RegisterUserViewController.swift */,
+				D5ED13332400AA230072705C /* RegisterChapterViewController.swift */,
+				D5BB3F302400CE6300646B5E /* UIDGuardedViewController.swift */,
+				D5BB3F2C2400CAA400646B5E /* StudentTestViewController.swift */,
+				D5BB3F2E2400CAAE00646B5E /* ChapterTestViewController.swift */,
+				D5BB3F322400D34600646B5E /* ScanClassViewController.swift */,
 				D50F98EA23FF1AE80023BE76 /* Main.storyboard */,
 				D50F98F023FF1AEA0023BE76 /* Assets.xcassets */,
 				D50F98F223FF1AEA0023BE76 /* LaunchScreen.storyboard */,
@@ -224,10 +242,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5BB3F2F2400CAAE00646B5E /* ChapterTestViewController.swift in Sources */,
+				D5ED13322400A9E10072705C /* RegisterUserViewController.swift in Sources */,
 				D50F98FC23FF92430023BE76 /* LoginViewController.swift in Sources */,
 				D50F98E523FF1AE80023BE76 /* AppDelegate.swift in Sources */,
 				D50F98EF23FF1AE80023BE76 /* FBLAApp.xcdatamodeld in Sources */,
+				D5BB3F2D2400CAA400646B5E /* StudentTestViewController.swift in Sources */,
 				D50F98E723FF1AE80023BE76 /* SceneDelegate.swift in Sources */,
+				D5BB3F312400CE6300646B5E /* UIDGuardedViewController.swift in Sources */,
+				D5BB3F332400D34600646B5E /* ScanClassViewController.swift in Sources */,
+				D5ED13342400AA230072705C /* RegisterChapterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +399,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4R484PGFUQ;
 				INFOPLIST_FILE = FBLAApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cvenkatramani.FBLAApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -391,7 +418,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4R484PGFUQ;
 				INFOPLIST_FILE = FBLAApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cvenkatramani.FBLAApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
