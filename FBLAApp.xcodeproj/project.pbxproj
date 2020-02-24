@@ -16,10 +16,17 @@
 		D50F98F423FF1AEA0023BE76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50F98F223FF1AEA0023BE76 /* LaunchScreen.storyboard */; };
 		D50F98FC23FF92430023BE76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50F98FB23FF92430023BE76 /* LoginViewController.swift */; };
 		D50F98FE23FF95980023BE76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D50F98FD23FF95980023BE76 /* GoogleService-Info.plist */; };
-		D5BB3F2D2400CAA400646B5E /* StudentTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB3F2C2400CAA400646B5E /* StudentTestViewController.swift */; };
 		D5BB3F2F2400CAAE00646B5E /* ChapterTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB3F2E2400CAAE00646B5E /* ChapterTestViewController.swift */; };
 		D5BB3F312400CE6300646B5E /* UIDGuardedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB3F302400CE6300646B5E /* UIDGuardedViewController.swift */; };
 		D5BB3F332400D34600646B5E /* ScanClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB3F322400D34600646B5E /* ScanClassViewController.swift */; };
+		D5C490862402F23200595574 /* StudentViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C490852402F23200595574 /* StudentViews.storyboard */; };
+		D5C4908A2402F24B00595574 /* ChapterViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C490892402F24B00595574 /* ChapterViews.storyboard */; };
+		D5C4908C2402F29000595574 /* StudentRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4908B2402F29000595574 /* StudentRequestViewController.swift */; };
+		D5C4908E2403162B00595574 /* ChapterHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4908D2403162B00595574 /* ChapterHomeViewController.swift */; };
+		D5C4909D2403172800595574 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4909B2403172800595574 /* EventCollectionViewCell.swift */; };
+		D5C4909E2403172800595574 /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5C4909C2403172800595574 /* EventCollectionViewCell.xib */; };
+		D5C490A02403567800595574 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4909F2403567800595574 /* AddEventViewController.swift */; };
+		D5C490A2240356A900595574 /* AddMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C490A1240356A900595574 /* AddMeetingViewController.swift */; };
 		D5ED13322400A9E10072705C /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED13312400A9E10072705C /* RegisterUserViewController.swift */; };
 		D5ED13342400AA230072705C /* RegisterChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED13332400AA230072705C /* RegisterChapterViewController.swift */; };
 /* End PBXBuildFile section */
@@ -38,10 +45,17 @@
 		D50F98F523FF1AEA0023BE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D50F98FB23FF92430023BE76 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D50F98FD23FF95980023BE76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D5BB3F2C2400CAA400646B5E /* StudentTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTestViewController.swift; sourceTree = "<group>"; };
 		D5BB3F2E2400CAAE00646B5E /* ChapterTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterTestViewController.swift; sourceTree = "<group>"; };
 		D5BB3F302400CE6300646B5E /* UIDGuardedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDGuardedViewController.swift; sourceTree = "<group>"; };
 		D5BB3F322400D34600646B5E /* ScanClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanClassViewController.swift; sourceTree = "<group>"; };
+		D5C490852402F23200595574 /* StudentViews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StudentViews.storyboard; sourceTree = "<group>"; };
+		D5C490892402F24B00595574 /* ChapterViews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChapterViews.storyboard; sourceTree = "<group>"; };
+		D5C4908B2402F29000595574 /* StudentRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRequestViewController.swift; sourceTree = "<group>"; };
+		D5C4908D2403162B00595574 /* ChapterHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterHomeViewController.swift; sourceTree = "<group>"; };
+		D5C4909B2403172800595574 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		D5C4909C2403172800595574 /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
+		D5C4909F2403567800595574 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		D5C490A1240356A900595574 /* AddMeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeetingViewController.swift; sourceTree = "<group>"; };
 		D5ED13312400A9E10072705C /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		D5ED13332400AA230072705C /* RegisterChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterChapterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,14 +112,18 @@
 			children = (
 				D50F98E423FF1AE80023BE76 /* AppDelegate.swift */,
 				D50F98E623FF1AE80023BE76 /* SceneDelegate.swift */,
-				D50F98FB23FF92430023BE76 /* LoginViewController.swift */,
-				D5ED13312400A9E10072705C /* RegisterUserViewController.swift */,
-				D5ED13332400AA230072705C /* RegisterChapterViewController.swift */,
+				D5C490842402F0DA00595574 /* LoginSignUp */,
 				D5BB3F302400CE6300646B5E /* UIDGuardedViewController.swift */,
-				D5BB3F2C2400CAA400646B5E /* StudentTestViewController.swift */,
 				D5BB3F2E2400CAAE00646B5E /* ChapterTestViewController.swift */,
-				D5BB3F322400D34600646B5E /* ScanClassViewController.swift */,
+				D5C4908B2402F29000595574 /* StudentRequestViewController.swift */,
+				D5C4908D2403162B00595574 /* ChapterHomeViewController.swift */,
+				D5C4909F2403567800595574 /* AddEventViewController.swift */,
+				D5C490A1240356A900595574 /* AddMeetingViewController.swift */,
+				D5C4909B2403172800595574 /* EventCollectionViewCell.swift */,
+				D5C4909C2403172800595574 /* EventCollectionViewCell.xib */,
 				D50F98EA23FF1AE80023BE76 /* Main.storyboard */,
+				D5C490852402F23200595574 /* StudentViews.storyboard */,
+				D5C490892402F24B00595574 /* ChapterViews.storyboard */,
 				D50F98F023FF1AEA0023BE76 /* Assets.xcassets */,
 				D50F98F223FF1AEA0023BE76 /* LaunchScreen.storyboard */,
 				D50F98F523FF1AEA0023BE76 /* Info.plist */,
@@ -113,6 +131,17 @@
 				D50F98ED23FF1AE80023BE76 /* FBLAApp.xcdatamodeld */,
 			);
 			path = FBLAApp;
+			sourceTree = "<group>";
+		};
+		D5C490842402F0DA00595574 /* LoginSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				D50F98FB23FF92430023BE76 /* LoginViewController.swift */,
+				D5ED13312400A9E10072705C /* RegisterUserViewController.swift */,
+				D5ED13332400AA230072705C /* RegisterChapterViewController.swift */,
+				D5BB3F322400D34600646B5E /* ScanClassViewController.swift */,
+			);
+			path = LoginSignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +207,9 @@
 				D50F98F423FF1AEA0023BE76 /* LaunchScreen.storyboard in Resources */,
 				D50F98FE23FF95980023BE76 /* GoogleService-Info.plist in Resources */,
 				D50F98F123FF1AEA0023BE76 /* Assets.xcassets in Resources */,
+				D5C4908A2402F24B00595574 /* ChapterViews.storyboard in Resources */,
+				D5C4909E2403172800595574 /* EventCollectionViewCell.xib in Resources */,
+				D5C490862402F23200595574 /* StudentViews.storyboard in Resources */,
 				D50F98EC23FF1AE80023BE76 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,11 +275,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5BB3F2F2400CAAE00646B5E /* ChapterTestViewController.swift in Sources */,
+				D5C490A02403567800595574 /* AddEventViewController.swift in Sources */,
+				D5C4909D2403172800595574 /* EventCollectionViewCell.swift in Sources */,
+				D5C4908E2403162B00595574 /* ChapterHomeViewController.swift in Sources */,
+				D5C490A2240356A900595574 /* AddMeetingViewController.swift in Sources */,
 				D5ED13322400A9E10072705C /* RegisterUserViewController.swift in Sources */,
 				D50F98FC23FF92430023BE76 /* LoginViewController.swift in Sources */,
 				D50F98E523FF1AE80023BE76 /* AppDelegate.swift in Sources */,
 				D50F98EF23FF1AE80023BE76 /* FBLAApp.xcdatamodeld in Sources */,
-				D5BB3F2D2400CAA400646B5E /* StudentTestViewController.swift in Sources */,
+				D5C4908C2402F29000595574 /* StudentRequestViewController.swift in Sources */,
 				D50F98E723FF1AE80023BE76 /* SceneDelegate.swift in Sources */,
 				D5BB3F312400CE6300646B5E /* UIDGuardedViewController.swift in Sources */,
 				D5BB3F332400D34600646B5E /* ScanClassViewController.swift in Sources */,

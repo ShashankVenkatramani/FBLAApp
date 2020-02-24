@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Student Request View Controller-->
+        <scene sceneID="LAh-Qf-7JX">
+            <objects>
+                <viewController id="YP9-vL-tIA" customClass="StudentRequestViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g9r-Oj-Di0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading . . ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onl-32-XXK">
+                                <rect key="frame" x="162.5" y="442.5" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXL-wK-ymv">
+                                <rect key="frame" x="20" y="59" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="YP9-vL-tIA" eventType="touchUpInside" id="5q1-P5-kN7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUr-Y0-0n3">
+                                <rect key="frame" x="349" y="59" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Profile"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JXL-wK-ymv" firstAttribute="top" secondItem="c9V-KH-rt1" secondAttribute="top" constant="15" id="0MR-Gk-TWP"/>
+                            <constraint firstItem="Onl-32-XXK" firstAttribute="centerY" secondItem="c9V-KH-rt1" secondAttribute="centerY" id="Eo0-jE-nMe"/>
+                            <constraint firstItem="Onl-32-XXK" firstAttribute="centerX" secondItem="c9V-KH-rt1" secondAttribute="centerX" id="p7R-SM-Qfl"/>
+                            <constraint firstItem="JXL-wK-ymv" firstAttribute="leading" secondItem="c9V-KH-rt1" secondAttribute="leading" constant="20" id="psr-LR-eFd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c9V-KH-rt1"/>
+                    </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="Onl-32-XXK" id="xoL-I0-Yb5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NlC-n6-NgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-190" y="110"/>
+        </scene>
+    </scenes>
+</document>

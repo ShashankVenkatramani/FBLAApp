@@ -72,7 +72,7 @@ class RegisterUserViewController: UIViewController {
                                         }
                                     }
                                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                                    let viewController = storyboard.instantiateViewController(identifier: "StudentTestViewController") as!  StudentTestViewController
+                                    let viewController = storyboard.instantiateViewController(identifier: "StudentRequestViewController") as! StudentRequestViewController
                                     viewController.uid = user.user.uid
                                     viewController.modalPresentationStyle = .fullScreen
                                     self.present(viewController, animated: true, completion: nil)

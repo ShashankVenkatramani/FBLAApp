@@ -32,8 +32,8 @@ class RegisterChapterViewController: UIViewController {
                                                 print("Error writing document: \(err)")
                                             } else {
                                                 print("Document successfully written!")
-                                                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                                                let viewController = storyboard.instantiateViewController(identifier: "ChapterTestViewController") as! ChapterTestViewController
+                                                let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
+                                                let viewController = storyboard.instantiateViewController(identifier: "ChapterHomeViewController") as! ChapterHomeViewController
                                                 viewController.uid = user.user.uid
                                                 viewController.modalPresentationStyle = .fullScreen
                                                 self.present(viewController, animated: true, completion: nil)

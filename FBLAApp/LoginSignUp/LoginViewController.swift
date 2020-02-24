@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
                         studentPathTest.getDocument { (document, error) in
                             if let document = document, document.exists {
                                 let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
-                                let viewController = storyboard.instantiateViewController(identifier: "StudentTestViewController") as! StudentTestViewController
+                                let viewController = storyboard.instantiateViewController(identifier: "StudentRequestViewController") as! StudentRequestViewController
                                 viewController.uid = uid
                                 viewController.modalPresentationStyle = .fullScreen
                                 self.present(viewController, animated: true, completion: nil)
@@ -36,8 +36,8 @@ class LoginViewController: UIViewController {
                         ownerPathTest.getDocument {(document, error) in
                             if let document = document {
                                 if document.exists {
-                                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                                    let viewController = storyboard.instantiateViewController(identifier: "ChapterTestViewController") as! ChapterTestViewController
+                                    let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
+                                    let viewController = storyboard.instantiateViewController(identifier: "ChapterHomeViewController") as! ChapterHomeViewController
                                     viewController.uid = uid
                                     viewController.modalPresentationStyle = .fullScreen
                                     self.present(viewController, animated: true, completion: nil)
@@ -72,7 +72,7 @@ class LoginViewController: UIViewController {
                 if let document = document {
                     if document.exists {
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let viewController = storyboard.instantiateViewController(identifier: "StudentTestViewController") as! StudentTestViewController
+                        let viewController = storyboard.instantiateViewController(identifier: "StudentRequestViewController") as! StudentRequestViewController
                         viewController.uid = uid
                         viewController.modalPresentationStyle = .fullScreen
                         self.present(viewController, animated: true, completion: nil)
@@ -83,8 +83,8 @@ class LoginViewController: UIViewController {
             chapterPathTest.getDocument { (document, error) in
                 if let document = document {
                     if document.exists {
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let viewController = storyboard.instantiateViewController(identifier: "ChapterTestViewController") as! ChapterTestViewController
+                        let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
+                        let viewController = storyboard.instantiateViewController(identifier: "ChapterHomeViewController") as! ChapterHomeViewController
                         viewController.uid = uid
                         viewController.modalPresentationStyle = .fullScreen
                         self.present(viewController, animated: true, completion: nil)
