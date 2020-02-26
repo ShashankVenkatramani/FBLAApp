@@ -71,7 +71,7 @@ class LoginViewController: UIViewController {
             studentPathTest.getDocument { (document, error) in
                 if let document = document {
                     if document.exists {
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
                         let viewController = storyboard.instantiateViewController(identifier: "StudentRequestViewController") as! StudentRequestViewController
                         viewController.uid = uid
                         viewController.modalPresentationStyle = .fullScreen

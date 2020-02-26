@@ -71,7 +71,7 @@ class RegisterUserViewController: UIViewController {
                                             print("Document succesfully written")
                                         }
                                     }
-                                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                    let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
                                     let viewController = storyboard.instantiateViewController(identifier: "StudentRequestViewController") as! StudentRequestViewController
                                     viewController.uid = user.user.uid
                                     viewController.modalPresentationStyle = .fullScreen

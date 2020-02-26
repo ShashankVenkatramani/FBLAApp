@@ -10,7 +10,7 @@
         <!--Student Request View Controller-->
         <scene sceneID="LAh-Qf-7JX">
             <objects>
-                <viewController id="YP9-vL-tIA" customClass="StudentRequestViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StudentRequestViewController" id="YP9-vL-tIA" customClass="StudentRequestViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g9r-Oj-Di0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

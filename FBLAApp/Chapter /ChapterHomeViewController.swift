@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 struct Event {
     var name: String
     var date: String
@@ -30,6 +31,20 @@ class ChapterHomeViewController: UIDGuardedViewController {
     var events: [Event] = []
     var meetings: [Event] = []
     var announcements: [Announcement] = []
+    @IBAction func logoutButtonPressed(_ sender: Any) {
+        try! Auth.auth().signOut()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
+    }
+    @IBAction func studentButtonPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "StudentsRequestsViewController") as! StudentsRequestsViewController
+        viewController.uid = uid
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
+    }
     @IBAction func addAnnouncementButtonPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "AddAnnouncementViewController") as! AddAnnouncementViewController
