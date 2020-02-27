@@ -88,6 +88,15 @@ class StudentsRequestsViewController: UIDGuardedViewController {
         logoutButton.addTarget(self, action: #selector(menuLogout), for: .touchUpInside)
         logoutButton.setImage(UIImage(named: "logout"), for: .normal)
         
+        let profileButton = UIButton()
+        profileButton.translatesAutoresizingMaskIntoConstraints = false
+        sideView.addSubview(profileButton)
+        profileButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        profileButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        profileButton.bottomAnchor.constraint(equalTo: logoutButton.topAnchor, constant: -20).isActive = true
+        profileButton.leftAnchor.constraint(equalTo: sideView.leftAnchor, constant: 20).isActive = true
+        profileButton.addTarget(self, action: #selector(profileButtonPressed), for: .touchUpInside)
+        profileButton.setImage(UIImage(named: "profile"), for: .normal)
         
         return sideView
     }()
@@ -108,6 +117,13 @@ class StudentsRequestsViewController: UIDGuardedViewController {
     @objc func homeButtonPressed() {
         let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "ChapterHomeViewController") as! ChapterHomeViewController
+        viewController.uid = uid
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: false, completion: nil)
+    }
+    @objc func profileButtonPressed() {
+        let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "ChapterProfileViewController") as! ChapterProfileViewController
         viewController.uid = uid
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: false, completion: nil)

@@ -23,6 +23,7 @@
 		D566AF93240626330046E9D3 /* RequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566AF92240626330046E9D3 /* RequestTableViewCell.swift */; };
 		D5A4F1E72406414F004320A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4F1E62406414F004320A2 /* Constants.swift */; };
 		D5AE0A9124071ACE008D0689 /* QRCodeChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE0A9024071ACE008D0689 /* QRCodeChapterViewController.swift */; };
+		D5AE0A9324075E56008D0689 /* ChapterProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE0A9224075E56008D0689 /* ChapterProfileViewController.swift */; };
 		D5BB3F2F2400CAAE00646B5E /* ChapterTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB3F2E2400CAAE00646B5E /* ChapterTestViewController.swift */; };
 		D5BB3F312400CE6300646B5E /* UIDGuardedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB3F302400CE6300646B5E /* UIDGuardedViewController.swift */; };
 		D5BB3F332400D34600646B5E /* ScanClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB3F322400D34600646B5E /* ScanClassViewController.swift */; };
@@ -59,6 +60,7 @@
 		D566AF92240626330046E9D3 /* RequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTableViewCell.swift; sourceTree = "<group>"; };
 		D5A4F1E62406414F004320A2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D5AE0A9024071ACE008D0689 /* QRCodeChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeChapterViewController.swift; sourceTree = "<group>"; };
+		D5AE0A9224075E56008D0689 /* ChapterProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterProfileViewController.swift; sourceTree = "<group>"; };
 		D5BB3F2E2400CAAE00646B5E /* ChapterTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterTestViewController.swift; sourceTree = "<group>"; };
 		D5BB3F302400CE6300646B5E /* UIDGuardedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDGuardedViewController.swift; sourceTree = "<group>"; };
 		D5BB3F322400D34600646B5E /* ScanClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanClassViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				D566AF8E24061F110046E9D3 /* StudentsRequestsViewController.swift */,
 				D5AE0A8D2407195E008D0689 /* StudentsRequestsSupportFiles */,
 				D5AE0A9024071ACE008D0689 /* QRCodeChapterViewController.swift */,
+				D5AE0A9224075E56008D0689 /* ChapterProfileViewController.swift */,
 			);
 			path = "Chapter ";
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				D50F98EF23FF1AE80023BE76 /* FBLAApp.xcdatamodeld in Sources */,
 				D5C4908C2402F29000595574 /* StudentRequestViewController.swift in Sources */,
 				D566AF8F24061F110046E9D3 /* StudentsRequestsViewController.swift in Sources */,
+				D5AE0A9324075E56008D0689 /* ChapterProfileViewController.swift in Sources */,
 				D5A4F1E72406414F004320A2 /* Constants.swift in Sources */,
 				D50F98E723FF1AE80023BE76 /* SceneDelegate.swift in Sources */,
 				D5BB3F312400CE6300646B5E /* UIDGuardedViewController.swift in Sources */,
