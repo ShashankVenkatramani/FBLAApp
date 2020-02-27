@@ -12,6 +12,7 @@ class EventCollectionViewCell: UICollectionViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var monthLabel: UILabel!
+    @IBOutlet var customizeView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

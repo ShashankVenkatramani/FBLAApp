@@ -11,6 +11,7 @@ import UIKit
 class AnnouncementTableViewCell: UITableViewCell {
     @IBOutlet var nameTextField: UILabel!
     @IBOutlet var messageTextField: UILabel!
+    @IBOutlet var customizeView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

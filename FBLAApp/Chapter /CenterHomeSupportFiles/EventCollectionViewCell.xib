@@ -16,6 +16,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOq-8S-GHB">
+                        <rect key="frame" x="12" y="12" width="101" height="101"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdM-ml-9Me">
                         <rect key="frame" x="20" y="20" width="85" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -42,17 +46,22 @@
             </view>
             <constraints>
                 <constraint firstItem="UdM-ml-9Me" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="01F-qC-cmj"/>
+                <constraint firstItem="MOq-8S-GHB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="FSk-3m-yAJ"/>
+                <constraint firstAttribute="trailing" secondItem="MOq-8S-GHB" secondAttribute="trailing" constant="12" id="N8W-Ve-kad"/>
                 <constraint firstItem="buN-7D-Sf8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="NED-A9-BPb"/>
                 <constraint firstItem="p4T-tL-aW8" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="QkZ-MX-c6h"/>
+                <constraint firstItem="MOq-8S-GHB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="UEZ-uR-mtJ"/>
                 <constraint firstItem="UdM-ml-9Me" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="bYx-va-nft"/>
                 <constraint firstAttribute="trailing" secondItem="UdM-ml-9Me" secondAttribute="trailing" constant="20" id="hAh-dy-ATU"/>
                 <constraint firstAttribute="trailing" secondItem="buN-7D-Sf8" secondAttribute="trailing" constant="20" id="iH6-Iy-35c"/>
                 <constraint firstAttribute="bottom" secondItem="buN-7D-Sf8" secondAttribute="bottom" constant="20" id="lJD-Vx-2Mo"/>
                 <constraint firstItem="p4T-tL-aW8" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="mYA-yr-0Ur"/>
+                <constraint firstAttribute="bottom" secondItem="MOq-8S-GHB" secondAttribute="bottom" constant="12" id="soK-fd-2ue"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="125" height="125"/>
             <connections>
+                <outlet property="customizeView" destination="MOq-8S-GHB" id="dmj-T5-Znu"/>
                 <outlet property="dateLabel" destination="p4T-tL-aW8" id="3AK-EN-X3Q"/>
                 <outlet property="monthLabel" destination="buN-7D-Sf8" id="a9d-z3-Vbr"/>
                 <outlet property="nameLabel" destination="UdM-ml-9Me" id="TEd-Vv-1f8"/>

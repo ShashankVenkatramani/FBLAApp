@@ -21,6 +21,8 @@
 		D566AF8F24061F110046E9D3 /* StudentsRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566AF8E24061F110046E9D3 /* StudentsRequestsViewController.swift */; };
 		D566AF9124061F450046E9D3 /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566AF9024061F450046E9D3 /* StudentTableViewCell.swift */; };
 		D566AF93240626330046E9D3 /* RequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566AF92240626330046E9D3 /* RequestTableViewCell.swift */; };
+		D5A4F1E72406414F004320A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4F1E62406414F004320A2 /* Constants.swift */; };
+		D5AE0A9124071ACE008D0689 /* QRCodeChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE0A9024071ACE008D0689 /* QRCodeChapterViewController.swift */; };
 		D5BB3F2F2400CAAE00646B5E /* ChapterTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB3F2E2400CAAE00646B5E /* ChapterTestViewController.swift */; };
 		D5BB3F312400CE6300646B5E /* UIDGuardedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB3F302400CE6300646B5E /* UIDGuardedViewController.swift */; };
 		D5BB3F332400D34600646B5E /* ScanClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB3F322400D34600646B5E /* ScanClassViewController.swift */; };
@@ -55,6 +57,8 @@
 		D566AF8E24061F110046E9D3 /* StudentsRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsRequestsViewController.swift; sourceTree = "<group>"; };
 		D566AF9024061F450046E9D3 /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
 		D566AF92240626330046E9D3 /* RequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTableViewCell.swift; sourceTree = "<group>"; };
+		D5A4F1E62406414F004320A2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D5AE0A9024071ACE008D0689 /* QRCodeChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeChapterViewController.swift; sourceTree = "<group>"; };
 		D5BB3F2E2400CAAE00646B5E /* ChapterTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterTestViewController.swift; sourceTree = "<group>"; };
 		D5BB3F302400CE6300646B5E /* UIDGuardedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDGuardedViewController.swift; sourceTree = "<group>"; };
 		D5BB3F322400D34600646B5E /* ScanClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanClassViewController.swift; sourceTree = "<group>"; };
@@ -127,7 +131,7 @@
 				D5BB3F2E2400CAAE00646B5E /* ChapterTestViewController.swift */,
 				D5C4908B2402F29000595574 /* StudentRequestViewController.swift */,
 				D525804D2404A68000F50FEC /* Chapter  */,
-				D5C4909C2403172800595574 /* EventCollectionViewCell.xib */,
+				D5A4F1E62406414F004320A2 /* Constants.swift */,
 				D50F98EA23FF1AE80023BE76 /* Main.storyboard */,
 				D5C490852402F23200595574 /* StudentViews.storyboard */,
 				D5C490892402F24B00595574 /* ChapterViews.storyboard */,
@@ -144,16 +148,34 @@
 			isa = PBXGroup;
 			children = (
 				D5C4908D2403162B00595574 /* ChapterHomeViewController.swift */,
+				D5AE0A8C2407193C008D0689 /* CenterHomeSupportFiles */,
+				D566AF8E24061F110046E9D3 /* StudentsRequestsViewController.swift */,
+				D5AE0A8D2407195E008D0689 /* StudentsRequestsSupportFiles */,
+				D5AE0A9024071ACE008D0689 /* QRCodeChapterViewController.swift */,
+			);
+			path = "Chapter ";
+			sourceTree = "<group>";
+		};
+		D5AE0A8C2407193C008D0689 /* CenterHomeSupportFiles */ = {
+			isa = PBXGroup;
+			children = (
 				D5C4909F2403567800595574 /* AddEventViewController.swift */,
 				D5C490A1240356A900595574 /* AddMeetingViewController.swift */,
 				D525804E2404A75900F50FEC /* AddAnnouncementViewController.swift */,
 				D52580502404ACD900F50FEC /* AnnouncementTableViewCell.swift */,
 				D5C4909B2403172800595574 /* EventCollectionViewCell.swift */,
-				D566AF8E24061F110046E9D3 /* StudentsRequestsViewController.swift */,
+				D5C4909C2403172800595574 /* EventCollectionViewCell.xib */,
+			);
+			path = CenterHomeSupportFiles;
+			sourceTree = "<group>";
+		};
+		D5AE0A8D2407195E008D0689 /* StudentsRequestsSupportFiles */ = {
+			isa = PBXGroup;
+			children = (
 				D566AF9024061F450046E9D3 /* StudentTableViewCell.swift */,
 				D566AF92240626330046E9D3 /* RequestTableViewCell.swift */,
 			);
-			path = "Chapter ";
+			path = StudentsRequestsSupportFiles;
 			sourceTree = "<group>";
 		};
 		D5C490842402F0DA00595574 /* LoginSignUp */ = {
@@ -305,6 +327,7 @@
 				D566AF93240626330046E9D3 /* RequestTableViewCell.swift in Sources */,
 				D566AF9124061F450046E9D3 /* StudentTableViewCell.swift in Sources */,
 				D5C490A2240356A900595574 /* AddMeetingViewController.swift in Sources */,
+				D5AE0A9124071ACE008D0689 /* QRCodeChapterViewController.swift in Sources */,
 				D5ED13322400A9E10072705C /* RegisterUserViewController.swift in Sources */,
 				D50F98FC23FF92430023BE76 /* LoginViewController.swift in Sources */,
 				D52580512404ACD900F50FEC /* AnnouncementTableViewCell.swift in Sources */,
@@ -312,6 +335,7 @@
 				D50F98EF23FF1AE80023BE76 /* FBLAApp.xcdatamodeld in Sources */,
 				D5C4908C2402F29000595574 /* StudentRequestViewController.swift in Sources */,
 				D566AF8F24061F110046E9D3 /* StudentsRequestsViewController.swift in Sources */,
+				D5A4F1E72406414F004320A2 /* Constants.swift in Sources */,
 				D50F98E723FF1AE80023BE76 /* SceneDelegate.swift in Sources */,
 				D5BB3F312400CE6300646B5E /* UIDGuardedViewController.swift in Sources */,
 				D5BB3F332400D34600646B5E /* ScanClassViewController.swift in Sources */,
