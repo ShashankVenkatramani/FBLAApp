@@ -32,7 +32,11 @@ class StudentRequestViewController: UIDGuardedViewController {
                         }
                     }
                 } else {
-                    //ADDIN: go to home
+                    let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
+                    let viewController = storyboard.instantiateViewController(identifier: "StudentHomeViewController") as! StudentHomeViewController
+                    viewController.uid = self.uid
+                    viewController.modalPresentationStyle = .fullScreen
+                    self.present(viewController, animated: true, completion: nil)
                 }
             }
         }
