@@ -383,14 +383,24 @@ extension ChapterHomeViewController: UICollectionViewDelegate, UICollectionViewD
             if eventData.uid == "none" {
                 return
             } else {
-                
+                let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
+                let viewController = storyboard.instantiateViewController(identifier: "ViewEventViewController") as! ViewEventViewController
+                viewController.modalPresentationStyle = .fullScreen
+                viewController.uid = self.uid
+                viewController.event = eventData
+                self.present(viewController, animated: true, completion: nil)
             }
         } else if collectionView == meetingsCollectionView {
-            let meetingData = events[indexPath.row]
+            let meetingData = meetings[indexPath.row]
             if meetingData.uid == "none" {
                 return
             } else {
-                
+                let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
+                let viewController = storyboard.instantiateViewController(identifier: "ViewMeetingViewController") as! ViewMeetingViewController
+                viewController.modalPresentationStyle = .fullScreen
+                viewController.uid = self.uid
+                viewController.meeting = meetingData
+                self.present(viewController, animated: true, completion: nil)
             }
         }
     }

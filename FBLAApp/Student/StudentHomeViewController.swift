@@ -21,6 +21,13 @@ class StudentHomeViewController: UIDGuardedViewController {
     var events: [Event] = []
     var meetings: [Event] = []
     var announcements: [Announcement] = []
+    @IBAction func QRCodeButtonPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "ScanEventViewController") as! ScanEventViewController
+        viewController.uid = self.uid!
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
+    }
     //: Start menu bar
     @IBAction func menuButtonPressed(_ sender: Any) {
         switchMenuState()
@@ -353,7 +360,32 @@ extension StudentHomeViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("pressed something")
+        if collectionView == eventsCollectionView {
+            let eventData = events[indexPath.row]
+            if eventData.uid == "none" {
+                return
+            } else {
+                let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
+                let viewController = storyboard.instantiateViewController(identifier: "StudentViewEventViewController") as! StudentViewEventViewController
+                viewController.modalPresentationStyle = .fullScreen
+                viewController.uid = self.uid
+                viewController.event = eventData
+                self.present(viewController, animated: true, completion: nil)
+            }
+        } else if collectionView == meetingsCollectionView {
+            let meetingData = meetings[indexPath.row]
+            print(meetingData.uid)
+            if meetingData.uid == "none" {
+                return
+            } else {
+                let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
+                let viewController = storyboard.instantiateViewController(identifier: "StudentViewMeetingViewController") as! StudentViewMeetingViewController
+                viewController.modalPresentationStyle = .fullScreen
+                viewController.uid = self.uid
+                viewController.meeting = meetingData
+                self.present(viewController, animated: true, completion: nil)
+            }
+        }
     }
 }
 
