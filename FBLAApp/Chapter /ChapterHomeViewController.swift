@@ -378,7 +378,21 @@ extension ChapterHomeViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("pressed something")
+        if collectionView == eventsCollectionView {
+            let eventData = events[indexPath.row]
+            if eventData.uid == "none" {
+                return
+            } else {
+                
+            }
+        } else if collectionView == meetingsCollectionView {
+            let meetingData = events[indexPath.row]
+            if meetingData.uid == "none" {
+                return
+            } else {
+                
+            }
+        }
     }
 }
 

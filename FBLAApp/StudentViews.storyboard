@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundTwoCircle" translatesAutoresizingMaskIntoConstraints="NO" id="dUs-zv-RV0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundTwoCircle" translatesAutoresizingMaskIntoConstraints="NO" id="dUs-zv-RV0">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading . . ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onl-32-XXK">
@@ -25,9 +25,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXL-wK-ymv">
-                                <rect key="frame" x="20" y="59" width="48" height="30"/>
-                                <state key="normal" title="Logout"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXL-wK-ymv">
+                                <rect key="frame" x="20" y="59" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ih3-8Y-XIt"/>
+                                    <constraint firstAttribute="width" constant="40" id="Pv6-eb-Klk"/>
+                                </constraints>
+                                <state key="normal" image="logout"/>
                                 <connections>
                                     <action selector="logoutButtonPressed:" destination="YP9-vL-tIA" eventType="touchUpInside" id="5q1-P5-kN7"/>
                                 </connections>
@@ -62,7 +66,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundTwoCircle" translatesAutoresizingMaskIntoConstraints="NO" id="rRE-41-YbQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundTwoCircle" translatesAutoresizingMaskIntoConstraints="NO" id="rRE-41-YbQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcS-IS-ECG">
@@ -205,7 +209,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="TZT-eH-dxk" firstAttribute="top" secondItem="MYh-XN-DjQ" secondAttribute="top" constant="60" id="0is-BA-gna"/>
+                            <constraint firstItem="TZT-eH-dxk" firstAttribute="top" secondItem="TyN-my-1mj" secondAttribute="top" constant="16" id="0is-BA-gna"/>
                             <constraint firstItem="TZT-eH-dxk" firstAttribute="leading" secondItem="TyN-my-1mj" secondAttribute="leading" constant="20" id="4AD-jj-uC9"/>
                             <constraint firstItem="f3e-dG-pEs" firstAttribute="leading" secondItem="TyN-my-1mj" secondAttribute="leading" constant="50" id="ACU-Fd-e3E"/>
                             <constraint firstItem="bYC-yb-eAw" firstAttribute="top" secondItem="NEg-7n-6D9" secondAttribute="bottom" constant="3" id="B4V-N0-Y5d"/>
@@ -243,6 +247,7 @@
     </scenes>
     <resources>
         <image name="BackgroundTwoCircle" width="562.5" height="1218"/>
+        <image name="logout" width="61.5" height="60"/>
         <image name="menuButton" width="43.5" height="33"/>
     </resources>
 </document>
