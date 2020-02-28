@@ -41,6 +41,8 @@
 		D5CD3B482408B63C007E5807 /* StudentViewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD3B472408B63C007E5807 /* StudentViewEventViewController.swift */; };
 		D5CD3B4A2408BC16007E5807 /* StudentViewMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD3B492408BC16007E5807 /* StudentViewMeetingViewController.swift */; };
 		D5CD3B4C2408CEB9007E5807 /* ScanEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD3B4B2408CEB9007E5807 /* ScanEventViewController.swift */; };
+		D5CD3B4F2408E7D7007E5807 /* StudentAttendenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD3B4E2408E7D7007E5807 /* StudentAttendenceViewController.swift */; };
+		D5CD3B512408EB5F007E5807 /* StudentAttendenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD3B502408EB5F007E5807 /* StudentAttendenceTableViewCell.swift */; };
 		D5ED13322400A9E10072705C /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED13312400A9E10072705C /* RegisterUserViewController.swift */; };
 		D5ED13342400AA230072705C /* RegisterChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED13332400AA230072705C /* RegisterChapterViewController.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +86,8 @@
 		D5CD3B472408B63C007E5807 /* StudentViewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewEventViewController.swift; sourceTree = "<group>"; };
 		D5CD3B492408BC16007E5807 /* StudentViewMeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewMeetingViewController.swift; sourceTree = "<group>"; };
 		D5CD3B4B2408CEB9007E5807 /* ScanEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanEventViewController.swift; sourceTree = "<group>"; };
+		D5CD3B4E2408E7D7007E5807 /* StudentAttendenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAttendenceViewController.swift; sourceTree = "<group>"; };
+		D5CD3B502408EB5F007E5807 /* StudentAttendenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAttendenceTableViewCell.swift; sourceTree = "<group>"; };
 		D5ED13312400A9E10072705C /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		D5ED13332400AA230072705C /* RegisterChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterChapterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +167,8 @@
 			children = (
 				D5C4908B2402F29000595574 /* StudentRequestViewController.swift */,
 				D5204CAC24078E80008019C5 /* StudentHomeViewController.swift */,
+				D5CD3B4E2408E7D7007E5807 /* StudentAttendenceViewController.swift */,
+				D5CD3B502408EB5F007E5807 /* StudentAttendenceTableViewCell.swift */,
 				D5CD3B4D2408E5E9007E5807 /* StudentHomeViewSupportFiles */,
 			);
 			path = Student;
@@ -366,7 +372,9 @@
 				D5CD3B482408B63C007E5807 /* StudentViewEventViewController.swift in Sources */,
 				D566AF93240626330046E9D3 /* RequestTableViewCell.swift in Sources */,
 				D566AF9124061F450046E9D3 /* StudentTableViewCell.swift in Sources */,
+				D5CD3B4F2408E7D7007E5807 /* StudentAttendenceViewController.swift in Sources */,
 				D5C490A2240356A900595574 /* AddMeetingViewController.swift in Sources */,
+				D5CD3B512408EB5F007E5807 /* StudentAttendenceTableViewCell.swift in Sources */,
 				D5AE0A9124071ACE008D0689 /* QRCodeChapterViewController.swift in Sources */,
 				D5ED13322400A9E10072705C /* RegisterUserViewController.swift in Sources */,
 				D5204CAD24078E80008019C5 /* StudentHomeViewController.swift in Sources */,
