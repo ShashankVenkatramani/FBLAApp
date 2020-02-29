@@ -312,7 +312,13 @@ extension StudentsRequestsViewController : UITableViewDelegate, UITableViewDataS
             self.present(alert, animated: true, completion: nil)
         }
         if tableView == studentsTableView {
-            
+            let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
+            let viewController = storyboard.instantiateViewController(identifier: "ChapterAttendenceViewController") as! ChapterAttendenceViewController
+            viewController.uid = self.uid
+            viewController.studentUID = students[indexPath.row]["uid"] as! String
+            viewController.name = students[indexPath.row]["name"] as! String
+            viewController.modalPresentationStyle = .fullScreen
+            self.present(viewController, animated: true, completion: nil)
         }
     }
 }

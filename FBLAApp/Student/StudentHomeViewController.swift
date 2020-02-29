@@ -12,14 +12,12 @@ import FirebaseAuth
 
 class StudentHomeViewController: UIDGuardedViewController {
     @IBOutlet var eventsCollectionView: UICollectionView!
-    @IBOutlet var meetingsCollectionView: UICollectionView!
     @IBOutlet var announcementsTableView: UITableView!
     
     let cellIdentifier = "EventCollectionViewCell"
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     var events: [Event] = []
-    var meetings: [Event] = []
     var announcements: [Announcement] = []
     @IBAction func QRCodeButtonPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
@@ -150,14 +148,14 @@ class StudentHomeViewController: UIDGuardedViewController {
         let db = Firestore.firestore()
         db.collection("students").document(self.uid!).getDocument { (document, error) in
             if let studentData = document!.data() {
-                self.downloadMeetingAndEventData(chapterUID: studentData["chapterUID"] as! String)
+                self.downloadEventData(chapterUID: studentData["chapterUID"] as! String)
             }
         }
         
         setUpMenu()
     }
     
-    func downloadMeetingAndEventData(chapterUID: String) {
+    func downloadEventData(chapterUID: String) {
         let db = Firestore.firestore()
         db.collection("chapters").document(chapterUID).collection("announcements").document("announcements").getDocument { (document, error) in
             if let announcementData = document!.data() {
@@ -169,54 +167,7 @@ class StudentHomeViewController: UIDGuardedViewController {
             }
         }
         var eventLoaded = false
-        var meetingLoaded = false
-        db.collection("chapters").document(chapterUID).collection("meetings").document("meetings").getDocument { (centerMeetingDocument, error) in
-            if let centerMeetingDocumentData = centerMeetingDocument?.data() {
-                for (meetingUID, meetingData) in centerMeetingDocumentData {
-                    let meetingDataDictionary = meetingData as! NSMutableDictionary
-                    let startDateFormatter = DateFormatter()
-                    startDateFormatter.dateFormat = "MM/dd/yyyy HH:mm"
-                    
-                    let dateFormatter = DateFormatter()
-                    dateFormatter.dateFormat = "dd"
-                    
-                    let monthFormatter = DateFormatter()
-                    monthFormatter.dateFormat = "MMM"
-                    
-                    let date = startDateFormatter.date(from: meetingDataDictionary.value(forKey: "start") as! String)
-                    
-                    let dateNumber = dateFormatter.string(from: date!)
-                    let month = monthFormatter.string(from: date!)
-                    self.meetings.append(Event(name: meetingDataDictionary.value(forKey: "name") as! String, date: dateNumber, month: month, uid: meetingUID as! String))
-                    print("appending")
-                }
-                meetingLoaded = true
-                print("event " + String(eventLoaded) + " meeting " + String(meetingLoaded))
-                if(eventLoaded && meetingLoaded) {
-                    if(self.events.count == 0) {
-                        self.events.append(Event(name: "none", date: "", month: "", uid: "none"))
-                    }
-                    if(self.meetings.count == 0) {
-                        self.meetings.append(Event(name: "none", date: "", month: "", uid: "none"))
-                    }
-                    self.eventsCollectionView.reloadData()
-                    self.meetingsCollectionView.reloadData()
-                }
-            } else {
-                meetingLoaded = true
-                print("event " + String(eventLoaded) + " meeting " + String(meetingLoaded))
-                if(eventLoaded && meetingLoaded) {
-                    if(self.events.count == 0) {
-                        self.events.append(Event(name: "none", date: "", month: "", uid: "none"))
-                    }
-                    if(self.meetings.count == 0) {
-                        self.meetings.append(Event(name: "none", date: "", month: "", uid: "none"))
-                    }
-                    self.eventsCollectionView.reloadData()
-                    self.meetingsCollectionView.reloadData()
-                }
-            }
-        }
+        
         db.collection("chapters").document(chapterUID).collection("events").document("events").getDocument { (centerEventDocument, error) in
             if let centerEventDocumentData = centerEventDocument?.data() {
                 for (eventUID, eventData) in centerEventDocumentData {
@@ -235,33 +186,8 @@ class StudentHomeViewController: UIDGuardedViewController {
                     let dateNumber = dateFormatter.string(from: date!)
                     let month = monthFormatter.string(from: date!)
                     self.events.append(Event(name: eventDataDictionary.value(forKey: "name") as! String, date: dateNumber, month: month, uid: eventUID as! String))
-                    print("appending")
                 }
-                eventLoaded = true
-                print("event " + String(eventLoaded) + " meeting " + String(meetingLoaded))
-                if(eventLoaded && meetingLoaded) {
-                    if(self.events.count == 0) {
-                        self.events.append(Event(name: "none", date: "", month: "", uid: "none"))
-                    }
-                    if(self.meetings.count == 0) {
-                        self.meetings.append(Event(name: "none", date: "", month: "", uid: "none"))
-                    }
-                    self.eventsCollectionView.reloadData()
-                    self.meetingsCollectionView.reloadData()
-                }
-            } else {
-                eventLoaded = true
-                print("event " + String(eventLoaded) + " meeting " + String(meetingLoaded))
-                if(eventLoaded && meetingLoaded) {
-                    if(self.events.count == 0) {
-                        self.events.append(Event(name: "none", date: "", month: "", uid: "none"))
-                    }
-                    if(self.meetings.count == 0) {
-                        self.meetings.append(Event(name: "none", date: "", month: "", uid: "none"))
-                    }
-                    self.eventsCollectionView.reloadData()
-                    self.meetingsCollectionView.reloadData()
-                }
+                self.eventsCollectionView.reloadData()
             }
         }
     }
@@ -275,12 +201,9 @@ class StudentHomeViewController: UIDGuardedViewController {
         announcementsTableView.dataSource = self
         eventsCollectionView.delegate = self
         eventsCollectionView.dataSource = self
-        meetingsCollectionView.delegate = self
-        meetingsCollectionView.dataSource = self
         
         let nib = UINib(nibName: "EventCollectionViewCell", bundle: nil)
         eventsCollectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
-        meetingsCollectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
     }
     
     private func setupCollectionViewItemSize() {
@@ -302,73 +225,41 @@ class StudentHomeViewController: UIDGuardedViewController {
             collectionViewFlowLayout.minimumInteritemSpacing = interItemSpacing
             
             eventsCollectionView.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
-            meetingsCollectionView.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
         }
     }
 }
 
 extension StudentHomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == eventsCollectionView {
-            return events.count
-        } else {
-            return meetings.count
-        }
+        return events.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventCollectionViewCell", for: indexPath) as! EventCollectionViewCell
-        print(events.count)
-        if collectionView == eventsCollectionView {
-            cell.nameLabel.text = events[indexPath.item].name
-            cell.dateLabel.text = events[indexPath.item].date
-            cell.monthLabel.text = events[indexPath.item].month
-            cell.customizeView.layer.cornerRadius = 10
-            
-            cell.layer.shadowColor = Colors.blue.cgColor
-            cell.layer.shadowOffset = CGSize(width: 2, height: 2)
-            cell.layer.shadowRadius = 6
-            cell.layer.shadowOpacity = 1
-        } else {
-            cell.nameLabel.text = meetings[indexPath.item].name
-            cell.dateLabel.text = meetings[indexPath.item].date
-            cell.monthLabel.text = meetings[indexPath.item].month
-            cell.customizeView.layer.cornerRadius = 10
-            
-            cell.layer.shadowColor = Colors.orange.cgColor
-            cell.layer.shadowOffset = CGSize(width: 2, height: 2)
-            cell.layer.shadowRadius = 6
-            cell.layer.shadowOpacity = 1
-        }
+        cell.nameLabel.text = events[indexPath.item].name
+        cell.dateLabel.text = events[indexPath.item].date
+        cell.monthLabel.text = events[indexPath.item].month
+        cell.customizeView.layer.cornerRadius = 10
+        
+        cell.layer.shadowColor = Colors.blue.cgColor
+        cell.layer.shadowOffset = CGSize(width: 2, height: 2)
+        cell.layer.shadowRadius = 6
+        cell.layer.shadowOpacity = 1
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView == eventsCollectionView {
-            let eventData = events[indexPath.row]
-            if eventData.uid == "none" {
-                return
-            } else {
-                let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
-                let viewController = storyboard.instantiateViewController(identifier: "StudentViewEventViewController") as! StudentViewEventViewController
-                viewController.modalPresentationStyle = .fullScreen
-                viewController.uid = self.uid
-                viewController.event = eventData
-                self.present(viewController, animated: true, completion: nil)
-            }
-        } else if collectionView == meetingsCollectionView {
-            let meetingData = meetings[indexPath.row]
-            print(meetingData.uid)
-            if meetingData.uid == "none" {
-                return
-            } else {
-                let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
-                let viewController = storyboard.instantiateViewController(identifier: "StudentViewMeetingViewController") as! StudentViewMeetingViewController
-                viewController.modalPresentationStyle = .fullScreen
-                viewController.uid = self.uid
-                viewController.meeting = meetingData
-                self.present(viewController, animated: true, completion: nil)
-            }
+        let eventData = events[indexPath.row]
+        if eventData.uid == "none" {
+            return
+        } else {
+            let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
+            let viewController = storyboard.instantiateViewController(identifier: "StudentViewEventViewController") as! StudentViewEventViewController
+            viewController.modalPresentationStyle = .fullScreen
+            viewController.uid = self.uid
+            viewController.event = eventData
+            self.present(viewController, animated: true, completion: nil)
         }
     }
 }

@@ -141,9 +141,7 @@ class StudentAttendenceViewController: UIDGuardedViewController {
         attendenceTableView.dataSource = self
         downloadData()
     }
-    var count = 0
     func downloadData() {
-        count = 0
         attendenceRecords = []
         let db = Firestore.firestore()
         db.collection("students").document(self.uid!).getDocument { (studentDocument, error) in
@@ -154,11 +152,6 @@ class StudentAttendenceViewController: UIDGuardedViewController {
                     eventUIDs.append(EventID(id: eventUID as! String, event: true))
                 }
             }
-            if let meetingDict = studentDocumentData!["meetings"] as! NSMutableDictionary? {
-                for (meetingUID, status) in meetingDict {
-                    eventUIDs.append(EventID(id: meetingUID as! String, event: false))
-                }
-            }
             db.collection("chapters").document(studentDocumentData!["chapterUID"] as! String).collection("events").document("events").getDocument { (document, error) in
                 if let eventDict = document?.data() {
                     for eventUID in eventUIDs {
@@ -167,27 +160,9 @@ class StudentAttendenceViewController: UIDGuardedViewController {
                             self.attendenceRecords.append(StudentAttendence(name: eventData.value(forKey: "name") as! String, desc: eventData.value(forKey: "description") as! String))
                         }
                     }
-                    self.successDownload()
+                    self.attendenceTableView.reloadData()
                 }
             }
-            db.collection("chapters").document(studentDocumentData!["chapterUID"] as! String).collection("meetings").document("meetings").getDocument { (document, error) in
-                if let eventDict = document?.data(){
-                    for eventUID in eventUIDs {
-                        if !eventUID.event {
-                            let eventData = eventDict[eventUID.id] as! NSMutableDictionary  
-                            self.attendenceRecords.append(StudentAttendence(name: eventData.value(forKey: "name") as! String, desc: eventData.value(forKey: "description") as! String))
-                        }
-                    }
-                    self.successDownload()
-                }
-            }
-        }
-    }
-    
-    func successDownload() {
-        count += 1
-        if count == 2 {
-            attendenceTableView.reloadData()
         }
     }
     /*
