@@ -94,6 +94,16 @@ class ChapterProfileViewController: UIDGuardedViewController {
         qaButton.addTarget(self, action: #selector(qaButtonPressed), for: .touchUpInside)
         qaButton.setImage(UIImage(named: "qa"), for: .normal)
         
+        let officerButton = UIButton()
+        officerButton.translatesAutoresizingMaskIntoConstraints = false
+        sideView.addSubview(officerButton)
+        officerButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        officerButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        officerButton.topAnchor.constraint(equalTo: qaButton.bottomAnchor, constant: 20).isActive = true
+        officerButton.leftAnchor.constraint(equalTo: sideView.leftAnchor, constant: 20).isActive = true
+        officerButton.addTarget(self, action: #selector(officerButtonPressed), for: .touchUpInside)
+        officerButton.setImage(UIImage(named: "tie"), for: .normal)
+        
         let logoutButton = UIButton()
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
         sideView.addSubview(logoutButton)
@@ -154,6 +164,13 @@ class ChapterProfileViewController: UIDGuardedViewController {
     @objc func qaButtonPressed() {
         let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "ChapterQAViewController") as! ChapterQAViewController
+        viewController.uid = uid
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: false, completion: nil)
+    }
+    @objc func officerButtonPressed() {
+        let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "ChapterOfficerViewController") as! ChapterOfficerViewController
         viewController.uid = uid
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: false, completion: nil)

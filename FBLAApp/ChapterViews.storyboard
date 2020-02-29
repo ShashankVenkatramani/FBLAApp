@@ -11,7 +11,7 @@
         <!--Chapter Profile View Controller-->
         <scene sceneID="Cpr-Jg-XNQ">
             <objects>
-                <viewController storyboardIdentifier="ChapterProfileViewController" id="Hfb-wE-Hwn" customClass="ChapterProfileViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChapterProfileViewController" id="Hfb-wE-Hwn" customClass="ChapterProfileViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EIB-Ek-Y54">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,7 +50,7 @@
         <!--Chapter Link View Controller-->
         <scene sceneID="u4u-gB-42i">
             <objects>
-                <viewController storyboardIdentifier="ChapterLinkViewController" id="duv-OW-Ayk" customClass="ChapterLinkViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChapterLinkViewController" id="duv-OW-Ayk" customClass="ChapterLinkViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KGX-km-trq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,7 +126,7 @@
                                     <constraint firstAttribute="width" constant="40" id="4ET-dS-0xE"/>
                                     <constraint firstAttribute="height" constant="40" id="ZiL-SM-k7G"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="plus"/>
+                                <state key="normal" backgroundImage="addButton"/>
                                 <connections>
                                     <action selector="addLinkPressed:" destination="duv-OW-Ayk" eventType="touchUpInside" id="quJ-04-XT7"/>
                                 </connections>
@@ -162,7 +162,7 @@
         <!--Add Link View Controller-->
         <scene sceneID="cMc-eE-Xcw">
             <objects>
-                <viewController storyboardIdentifier="AddLinkViewController" id="cnB-L5-Oz0" customClass="AddLinkViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddLinkViewController" id="cnB-L5-Oz0" customClass="AddLinkViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wap-QC-uud">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,10 +236,193 @@
             </objects>
             <point key="canvasLocation" x="1842.0289855072465" y="1364.7321428571429"/>
         </scene>
+        <!--Chapter Officer View Controller-->
+        <scene sceneID="fie-WP-jO3">
+            <objects>
+                <viewController storyboardIdentifier="ChapterOfficerViewController" id="4CA-vV-sT1" customClass="ChapterOfficerViewController" customModule="Oasis" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NfY-uS-6gs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundTwoCircle" translatesAutoresizingMaskIntoConstraints="NO" id="pIz-ZO-wHB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Officers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmd-j8-BOg">
+                                <rect key="frame" x="169" y="64" width="76.5" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sna-TP-32C">
+                                <rect key="frame" x="20" y="60" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9lK-i5-oGL"/>
+                                    <constraint firstAttribute="width" constant="40" id="roy-6V-ius"/>
+                                </constraints>
+                                <state key="normal" image="menuButton"/>
+                                <connections>
+                                    <action selector="menuButtonPressed:" destination="4CA-vV-sT1" eventType="touchUpInside" id="WNe-cJ-i8s"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gbq-RS-a9R">
+                                <rect key="frame" x="50" y="191" width="314" height="621"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OfficerTableViewCell" rowHeight="83" id="5YO-VS-Mfh" customClass="OfficerTableViewCell" customModule="Oasis">
+                                        <rect key="frame" x="0.0" y="28" width="314" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5YO-VS-Mfh" id="WwM-m2-si1">
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiG-FA-kBz">
+                                                    <rect key="frame" x="16" y="11" width="282" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyq-g1-gvg">
+                                                    <rect key="frame" x="16" y="51" width="282" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="JiG-FA-kBz" secondAttribute="trailing" id="8zA-Zl-Wa7"/>
+                                                <constraint firstItem="JiG-FA-kBz" firstAttribute="leading" secondItem="WwM-m2-si1" secondAttribute="leadingMargin" id="FPK-ua-BJV"/>
+                                                <constraint firstItem="JiG-FA-kBz" firstAttribute="top" secondItem="WwM-m2-si1" secondAttribute="topMargin" id="Vsj-Gd-Pwg"/>
+                                                <constraint firstItem="Jyq-g1-gvg" firstAttribute="leading" secondItem="WwM-m2-si1" secondAttribute="leadingMargin" id="bIE-sh-laP"/>
+                                                <constraint firstItem="Jyq-g1-gvg" firstAttribute="bottom" secondItem="WwM-m2-si1" secondAttribute="bottomMargin" id="ebl-8V-IhS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Jyq-g1-gvg" secondAttribute="trailing" id="ihQ-MG-aNJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameTextField" destination="JiG-FA-kBz" id="Zll-Ja-JtH"/>
+                                            <outlet property="positionTextField" destination="Jyq-g1-gvg" id="oQJ-8D-6Oe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiM-9m-72R">
+                                <rect key="frame" x="324" y="143" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="0KQ-fx-gk6"/>
+                                    <constraint firstAttribute="height" constant="40" id="SBk-S4-eht"/>
+                                </constraints>
+                                <state key="normal" image="addButton"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="4CA-vV-sT1" eventType="touchUpInside" id="DQR-vT-qL1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vmd-j8-BOg" firstAttribute="top" secondItem="tms-7Q-nPd" secondAttribute="top" constant="20" id="9ce-wK-dml"/>
+                            <constraint firstItem="Sna-TP-32C" firstAttribute="leading" secondItem="tms-7Q-nPd" secondAttribute="leading" constant="20" id="BTE-4f-zF0"/>
+                            <constraint firstItem="tms-7Q-nPd" firstAttribute="trailing" secondItem="BiM-9m-72R" secondAttribute="trailing" constant="50" id="FMI-Av-HYO"/>
+                            <constraint firstItem="tms-7Q-nPd" firstAttribute="bottom" secondItem="Gbq-RS-a9R" secondAttribute="bottom" constant="50" id="GjW-oj-R1f"/>
+                            <constraint firstItem="tms-7Q-nPd" firstAttribute="trailing" secondItem="Gbq-RS-a9R" secondAttribute="trailing" constant="50" id="KND-yi-pvQ"/>
+                            <constraint firstItem="Gbq-RS-a9R" firstAttribute="top" secondItem="Vmd-j8-BOg" secondAttribute="bottom" constant="100" id="KSr-YM-WMW"/>
+                            <constraint firstItem="Gbq-RS-a9R" firstAttribute="top" secondItem="BiM-9m-72R" secondAttribute="bottom" constant="8" id="V4q-oK-Oip"/>
+                            <constraint firstItem="Gbq-RS-a9R" firstAttribute="leading" secondItem="tms-7Q-nPd" secondAttribute="leading" constant="50" id="WOm-UE-thO"/>
+                            <constraint firstItem="Sna-TP-32C" firstAttribute="top" secondItem="tms-7Q-nPd" secondAttribute="top" constant="16" id="YFQ-ff-JSZ"/>
+                            <constraint firstItem="pIz-ZO-wHB" firstAttribute="leading" secondItem="tms-7Q-nPd" secondAttribute="leading" id="YO1-wj-Vyk"/>
+                            <constraint firstAttribute="bottom" secondItem="pIz-ZO-wHB" secondAttribute="bottom" id="kwZ-1V-IeK"/>
+                            <constraint firstItem="pIz-ZO-wHB" firstAttribute="trailing" secondItem="tms-7Q-nPd" secondAttribute="trailing" id="zXy-LW-ZCd"/>
+                            <constraint firstItem="Vmd-j8-BOg" firstAttribute="centerX" secondItem="pIz-ZO-wHB" secondAttribute="centerX" id="zux-q8-u7c"/>
+                            <constraint firstItem="pIz-ZO-wHB" firstAttribute="top" secondItem="NfY-uS-6gs" secondAttribute="top" id="zxv-4J-MGd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tms-7Q-nPd"/>
+                    </view>
+                    <connections>
+                        <outlet property="officersTableView" destination="Gbq-RS-a9R" id="nrx-i7-GB7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="COq-uS-vYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.9710144927537" y="2062.5"/>
+        </scene>
+        <!--Add Officer View Controller-->
+        <scene sceneID="LSK-LV-jdz">
+            <objects>
+                <viewController storyboardIdentifier="AddOfficerViewController" id="Vkb-3S-Hyy" customClass="AddOfficerViewController" customModule="Oasis" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sKN-rN-M0p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundTwoCircle" translatesAutoresizingMaskIntoConstraints="NO" id="NEx-hq-MRJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wN3-x8-Yk4">
+                                <rect key="frame" x="20" y="60" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="or6-Xy-sbz"/>
+                                    <constraint firstAttribute="width" constant="30" id="rME-cX-1NS"/>
+                                </constraints>
+                                <state key="normal" image="closeBlue"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="Vkb-3S-Hyy" eventType="touchUpInside" id="WN1-fU-od1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Officer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxu-vf-ZQV">
+                                <rect key="frame" x="152" y="64" width="110" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Officer Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ns7-8L-1lR">
+                                <rect key="frame" x="50" y="387" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Officer Position" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AyB-gA-mEd">
+                                <rect key="frame" x="50" y="431" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0c-Xp-JAd">
+                                <rect key="frame" x="167.5" y="812" width="79" height="30"/>
+                                <state key="normal" title="Add Officer"/>
+                                <connections>
+                                    <action selector="addOfficerPressed:" destination="Vkb-3S-Hyy" eventType="touchUpInside" id="kmX-9n-F7r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="elk-sv-h0B" firstAttribute="trailing" secondItem="AyB-gA-mEd" secondAttribute="trailing" constant="50" id="1uN-Zm-nuY"/>
+                            <constraint firstItem="AyB-gA-mEd" firstAttribute="centerY" secondItem="NEx-hq-MRJ" secondAttribute="centerY" id="6bh-a3-rs1"/>
+                            <constraint firstItem="NEx-hq-MRJ" firstAttribute="trailing" secondItem="elk-sv-h0B" secondAttribute="trailing" id="8v6-K1-LDX"/>
+                            <constraint firstItem="bxu-vf-ZQV" firstAttribute="top" secondItem="elk-sv-h0B" secondAttribute="top" constant="20" id="ATg-Vy-sug"/>
+                            <constraint firstItem="bxu-vf-ZQV" firstAttribute="centerX" secondItem="NEx-hq-MRJ" secondAttribute="centerX" id="L75-n9-inO"/>
+                            <constraint firstItem="wN3-x8-Yk4" firstAttribute="top" secondItem="elk-sv-h0B" secondAttribute="top" constant="16" id="NJ0-h5-Pli"/>
+                            <constraint firstItem="NEx-hq-MRJ" firstAttribute="leading" secondItem="elk-sv-h0B" secondAttribute="leading" id="VJz-JB-td3"/>
+                            <constraint firstItem="elk-sv-h0B" firstAttribute="trailing" secondItem="Ns7-8L-1lR" secondAttribute="trailing" constant="50" id="VOp-wX-uRB"/>
+                            <constraint firstItem="AyB-gA-mEd" firstAttribute="leading" secondItem="elk-sv-h0B" secondAttribute="leading" constant="50" id="W4y-G8-G1x"/>
+                            <constraint firstItem="wN3-x8-Yk4" firstAttribute="leading" secondItem="elk-sv-h0B" secondAttribute="leading" constant="20" id="cyg-QE-nvV"/>
+                            <constraint firstAttribute="bottom" secondItem="NEx-hq-MRJ" secondAttribute="bottom" id="dDu-kK-KuN"/>
+                            <constraint firstItem="Ns7-8L-1lR" firstAttribute="leading" secondItem="elk-sv-h0B" secondAttribute="leading" constant="50" id="eI7-eR-wBV"/>
+                            <constraint firstItem="elk-sv-h0B" firstAttribute="bottom" secondItem="Q0c-Xp-JAd" secondAttribute="bottom" constant="20" id="gNh-pa-KyR"/>
+                            <constraint firstItem="Q0c-Xp-JAd" firstAttribute="centerX" secondItem="NEx-hq-MRJ" secondAttribute="centerX" id="mGb-JZ-9ru"/>
+                            <constraint firstItem="NEx-hq-MRJ" firstAttribute="top" secondItem="sKN-rN-M0p" secondAttribute="top" id="q6D-Ue-e8U"/>
+                            <constraint firstItem="AyB-gA-mEd" firstAttribute="top" secondItem="Ns7-8L-1lR" secondAttribute="bottom" constant="10" id="xDQ-wV-zkG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="elk-sv-h0B"/>
+                    </view>
+                    <connections>
+                        <outlet property="officerNameTextField" destination="Ns7-8L-1lR" id="aFp-Mn-xuQ"/>
+                        <outlet property="officerPositionTextField" destination="AyB-gA-mEd" id="DXC-mn-7IB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbe-SR-zex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1842.0289855072465" y="2062.5"/>
+        </scene>
         <!--View Event View Controller-->
         <scene sceneID="fCM-8R-jPU">
             <objects>
-                <viewController storyboardIdentifier="ViewEventViewController" id="NMq-VH-rwQ" customClass="ViewEventViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewEventViewController" id="NMq-VH-rwQ" customClass="ViewEventViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GmQ-lV-lXS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -390,7 +573,7 @@
         <!--Chapter Home View Controller-->
         <scene sceneID="rJL-uu-SNy">
             <objects>
-                <viewController storyboardIdentifier="ChapterHomeViewController" id="jaN-K1-O5j" customClass="ChapterHomeViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChapterHomeViewController" id="jaN-K1-O5j" customClass="ChapterHomeViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ulu-eG-uw8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -398,8 +581,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundTwoCircle" translatesAutoresizingMaskIntoConstraints="NO" id="E7q-kG-tGE">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0z-b8-wKz">
-                                <rect key="frame" x="50" y="114" width="52" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0z-b8-wKz">
+                                <rect key="frame" x="50" y="114" width="124.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -500,7 +683,7 @@
                                     <constraint firstAttribute="width" constant="30" id="YeM-R7-kOX"/>
                                     <constraint firstAttribute="height" constant="30" id="nP8-R2-Kpl"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="plus"/>
+                                <state key="normal" backgroundImage="addButton"/>
                                 <connections>
                                     <action selector="addEventButtonPressed:" destination="jaN-K1-O5j" eventType="touchUpInside" id="7a2-Vl-yLR"/>
                                 </connections>
@@ -511,7 +694,7 @@
                                     <constraint firstAttribute="height" constant="30" id="94L-63-ZHj"/>
                                     <constraint firstAttribute="width" constant="30" id="S8V-94-9m5"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="plus"/>
+                                <state key="normal" backgroundImage="addButton"/>
                                 <connections>
                                     <action selector="addAnnouncementButtonPressed:" destination="jaN-K1-O5j" eventType="touchUpInside" id="dJ8-VE-zFY"/>
                                 </connections>
@@ -566,7 +749,7 @@
         <!--Add Event View Controller-->
         <scene sceneID="06p-Kd-UZn">
             <objects>
-                <viewController storyboardIdentifier="AddEventViewController" id="pOd-hv-brP" customClass="AddEventViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddEventViewController" id="pOd-hv-brP" customClass="AddEventViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I4D-A8-WMQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -688,7 +871,7 @@
         <!--Chapter Attendence View Controller-->
         <scene sceneID="Bhh-m7-jNs">
             <objects>
-                <viewController storyboardIdentifier="ChapterAttendenceViewController" id="x2k-Ka-Ped" customClass="ChapterAttendenceViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChapterAttendenceViewController" id="x2k-Ka-Ped" customClass="ChapterAttendenceViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NZw-g2-kty">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -787,7 +970,7 @@
         <!--Students Requests View Controller-->
         <scene sceneID="DpJ-Id-ehb">
             <objects>
-                <viewController storyboardIdentifier="StudentsRequestsViewController" id="5k3-L4-94y" customClass="StudentsRequestsViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StudentsRequestsViewController" id="5k3-L4-94y" customClass="StudentsRequestsViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EJB-bh-e35">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -801,14 +984,14 @@
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentTableViewCell" id="qlZ-Zu-TmE" customClass="StudentTableViewCell" customModule="FBLAApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="314" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="314" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qlZ-Zu-TmE" id="neo-3e-OX1">
-                                            <rect key="frame" x="0.0" y="0.0" width="314" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3M-wk-Fen">
-                                                    <rect key="frame" x="16" y="11" width="282" height="21.5"/>
+                                                    <rect key="frame" x="16" y="11" width="282" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -833,14 +1016,14 @@
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RequestTableViewCell" id="JiA-Ze-wLs" customClass="RequestTableViewCell" customModule="FBLAApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="314" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="314" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JiA-Ze-wLs" id="61x-VJ-3K0">
-                                            <rect key="frame" x="0.0" y="0.0" width="314" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHA-2j-ODr">
-                                                    <rect key="frame" x="16" y="11" width="282" height="21.5"/>
+                                                    <rect key="frame" x="16" y="11" width="282" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -932,7 +1115,7 @@
         <!--Code Chapter View Controller-->
         <scene sceneID="7kW-hf-ts1">
             <objects>
-                <viewController storyboardIdentifier="QRCodeChapterViewController" id="U8O-M3-WBb" customClass="QRCodeChapterViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRCodeChapterViewController" id="U8O-M3-WBb" customClass="QRCodeChapterViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GDT-UF-WSa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -991,7 +1174,7 @@
         <!--Add Meeting View Controller-->
         <scene sceneID="HFv-3o-ryZ">
             <objects>
-                <viewController storyboardIdentifier="AddMeetingViewController" id="SDP-hm-jC1" customClass="AddMeetingViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddMeetingViewController" id="SDP-hm-jC1" customClass="AddMeetingViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kGf-p4-FRG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1113,7 +1296,7 @@
         <!--ChapterQA View Controller-->
         <scene sceneID="y8A-qC-8DO">
             <objects>
-                <viewController storyboardIdentifier="ChapterQAViewController" id="eF0-eX-P5Q" customClass="ChapterQAViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChapterQAViewController" id="eF0-eX-P5Q" customClass="ChapterQAViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lba-mK-G3I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1223,7 +1406,7 @@
         <!--Add Announcement View Controller-->
         <scene sceneID="BLR-Tp-KmL">
             <objects>
-                <viewController storyboardIdentifier="AddAnnouncementViewController" id="uJH-oy-T0f" customClass="AddAnnouncementViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddAnnouncementViewController" id="uJH-oy-T0f" customClass="AddAnnouncementViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HVJ-CV-asF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1309,7 +1492,7 @@
         <!--View Meeting View Controller-->
         <scene sceneID="woq-7o-iT9">
             <objects>
-                <viewController storyboardIdentifier="ViewMeetingViewController" id="Zb9-Y6-eto" customClass="ViewMeetingViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewMeetingViewController" id="Zb9-Y6-eto" customClass="ViewMeetingViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y4B-eO-GFu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1454,9 +1637,9 @@
     </scenes>
     <resources>
         <image name="BackgroundTwoCircle" width="562.5" height="1218"/>
+        <image name="addButton" width="45" height="45"/>
         <image name="closeBlue" width="34.5" height="34.5"/>
         <image name="menuButton" width="43.5" height="33"/>
-        <image name="plus" width="45" height="45"/>
         <image name="qrCode" width="135" height="135"/>
     </resources>
 </document>

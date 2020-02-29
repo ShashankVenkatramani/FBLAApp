@@ -1,5 +1,5 @@
 //
-//  ChapterLinkViewController.swift
+//  ChapterOfficerViewController.swift
 //  FBLAApp
 //
 //  Created by Shanky(Prgm) on 2/28/20.
@@ -9,11 +9,11 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
-struct CustomLink {
-    var name:String
-    var link:String
+struct Officer {
+    var name: String
+    var position: String
 }
-class ChapterLinkViewController: UIDGuardedViewController {
+class ChapterOfficerViewController: UIDGuardedViewController {
     //: Start menu bar
     @IBAction func menuButtonPressed(_ sender: Any) {
         switchMenuState()
@@ -85,7 +85,7 @@ class ChapterLinkViewController: UIDGuardedViewController {
         linkButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         linkButton.topAnchor.constraint(equalTo: studentButton.bottomAnchor, constant: 20).isActive = true
         linkButton.leftAnchor.constraint(equalTo: sideView.leftAnchor, constant: 20).isActive = true
-        //linkButton.addTarget(self, action: #selector(linkButtonPressed), for: .touchUpInside)
+        linkButton.addTarget(self, action: #selector(linkButtonPressed), for: .touchUpInside)
         linkButton.setImage(UIImage(named: "link"), for: .normal)
         
         let qaButton = UIButton()
@@ -105,7 +105,7 @@ class ChapterLinkViewController: UIDGuardedViewController {
         officerButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         officerButton.topAnchor.constraint(equalTo: qaButton.bottomAnchor, constant: 20).isActive = true
         officerButton.leftAnchor.constraint(equalTo: sideView.leftAnchor, constant: 20).isActive = true
-        officerButton.addTarget(self, action: #selector(officerButtonPressed), for: .touchUpInside)
+        //officerButton.addTarget(self, action: #selector(officerButtonPressed), for: .touchUpInside)
         officerButton.setImage(UIImage(named: "tie"), for: .normal)
         
         let logoutButton = UIButton()
@@ -193,54 +193,48 @@ class ChapterLinkViewController: UIDGuardedViewController {
             ])
     }
     //: End menu bar
+    @IBAction func addButtonPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "AddOfficerViewController") as! AddOfficerViewController
+        viewController.uid = self.uid
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpMenu()
-        linksTableView.delegate = self
-        linksTableView.dataSource = self
-        downloadLinks()
+        officersTableView.delegate = self
+        officersTableView.dataSource = self
+        downloadOfficers()
     }
-    @IBOutlet var linksTableView: UITableView!
-    var links:[CustomLink] = []
-    @IBAction func addLinkPressed(_ sender:Any){
-        let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
-        let viewController = storyboard.instantiateViewController(identifier: "AddLinkViewController") as! AddLinkViewController
-        viewController.uid = uid
-        viewController.modalPresentationStyle = .fullScreen
-        self.present(viewController, animated: false, completion: nil)
-    }
-    func downloadLinks() {
+    @IBOutlet var officersTableView: UITableView!
+    var officers:[Officer] = []
+    
+    func downloadOfficers() {
         let db = Firestore.firestore()
-        db.collection("chapters").document(self.uid!).collection("links").document("links").getDocument { (document, error) in
-            if let documentData = document!.data() {
-                for (site, link) in documentData {
-                    self.links.append(CustomLink(name: site as! String, link: link as! String))
+        db.collection("chapters").document(self.uid!).collection("officers").document("officers").getDocument { (document, error) in
+            if let documentData = document?.data() {
+                for (name, position) in documentData {
+                    self.officers.append(Officer(name: name as! String, position: position as! String))
                 }
-                self.linksTableView.reloadData()
+                print(self.officers)
+                self.officersTableView.reloadData()
             }
         }
     }
 }
 
-extension ChapterLinkViewController: UITableViewDataSource, UITableViewDelegate {
+extension ChapterOfficerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return links.count
+        return officers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = linksTableView.dequeueReusableCell(withIdentifier: "LinkTableViewCell") as! LinkTableViewCell
-        cell.linkTextLabel.text = links[indexPath.row].name
-        cell.customView.layer.cornerRadius = 10
-            
-        cell.layer.shadowColor = Colors.purple.cgColor
-        cell.layer.shadowOffset = CGSize(width: 2, height: 2)
-        cell.layer.shadowRadius = 6
-        cell.layer.shadowOpacity = 1
+        let cell = officersTableView.dequeueReusableCell(withIdentifier: "OfficerTableViewCell") as! OfficerTableViewCell
+        cell.nameTextField.text = officers[indexPath.row].name
+        cell.positionTextField.text = officers[indexPath.row].position
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let link = links[indexPath.row].link
-        UIApplication.shared.open(URL(string: link as! String)!)
-    }
+    
 }
