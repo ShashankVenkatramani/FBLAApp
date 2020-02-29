@@ -90,6 +90,16 @@ class StudentHomeViewController: UIDGuardedViewController {
         attendenceButton.addTarget(self, action: #selector(attendenceButtonPressed), for: .touchUpInside)
         attendenceButton.setImage(UIImage(named: "attendance"), for: .normal)
         
+        let qaButton = UIButton()
+        qaButton.translatesAutoresizingMaskIntoConstraints = false
+        sideView.addSubview(qaButton)
+        qaButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        qaButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        qaButton.topAnchor.constraint(equalTo: attendenceButton.bottomAnchor, constant: 20).isActive = true
+        qaButton.leftAnchor.constraint(equalTo: sideView.leftAnchor, constant: 20).isActive = true
+        qaButton.addTarget(self, action: #selector(qaButtonPressed), for: .touchUpInside)
+        qaButton.setImage(UIImage(named: "qa"), for: .normal)
+        
         let logoutButton = UIButton()
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
         sideView.addSubview(logoutButton)
@@ -124,6 +134,14 @@ class StudentHomeViewController: UIDGuardedViewController {
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: false, completion: nil)
     }
+    @objc func qaButtonPressed() {
+        let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "StudentQAViewController") as! StudentQAViewController
+        viewController.uid = uid
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: false, completion: nil)
+    }
+    
     //run in view did load
     func setUpMenu() {
         view.addSubview(sideMenu)

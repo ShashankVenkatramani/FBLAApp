@@ -21,6 +21,8 @@
 		D52580512404ACD900F50FEC /* AnnouncementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52580502404ACD900F50FEC /* AnnouncementTableViewCell.swift */; };
 		D5295663240A0F3300DA3BE4 /* ChapterAttendenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5295662240A0F3300DA3BE4 /* ChapterAttendenceViewController.swift */; };
 		D5295665240A176000DA3BE4 /* ChapterQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5295664240A176000DA3BE4 /* ChapterQAViewController.swift */; };
+		D5295667240A18BB00DA3BE4 /* QATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5295666240A18BB00DA3BE4 /* QATableViewCell.swift */; };
+		D5295669240A1EA500DA3BE4 /* StudentQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5295668240A1EA500DA3BE4 /* StudentQAViewController.swift */; };
 		D566AF8F24061F110046E9D3 /* StudentsRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566AF8E24061F110046E9D3 /* StudentsRequestsViewController.swift */; };
 		D566AF9124061F450046E9D3 /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566AF9024061F450046E9D3 /* StudentTableViewCell.swift */; };
 		D566AF93240626330046E9D3 /* RequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566AF92240626330046E9D3 /* RequestTableViewCell.swift */; };
@@ -68,6 +70,8 @@
 		D52580502404ACD900F50FEC /* AnnouncementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewCell.swift; sourceTree = "<group>"; };
 		D5295662240A0F3300DA3BE4 /* ChapterAttendenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterAttendenceViewController.swift; sourceTree = "<group>"; };
 		D5295664240A176000DA3BE4 /* ChapterQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterQAViewController.swift; sourceTree = "<group>"; };
+		D5295666240A18BB00DA3BE4 /* QATableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QATableViewCell.swift; sourceTree = "<group>"; };
+		D5295668240A1EA500DA3BE4 /* StudentQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentQAViewController.swift; sourceTree = "<group>"; };
 		D566AF8E24061F110046E9D3 /* StudentsRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsRequestsViewController.swift; sourceTree = "<group>"; };
 		D566AF9024061F450046E9D3 /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
 		D566AF92240626330046E9D3 /* RequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTableViewCell.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 				D5204CAC24078E80008019C5 /* StudentHomeViewController.swift */,
 				D5CD3B4E2408E7D7007E5807 /* StudentAttendenceViewController.swift */,
 				D5CD3B502408EB5F007E5807 /* StudentAttendenceTableViewCell.swift */,
+				D5295668240A1EA500DA3BE4 /* StudentQAViewController.swift */,
 				D5CD3B4D2408E5E9007E5807 /* StudentHomeViewSupportFiles */,
 			);
 			path = Student;
@@ -192,6 +197,7 @@
 				D5AE0A9224075E56008D0689 /* ChapterProfileViewController.swift */,
 				D5295662240A0F3300DA3BE4 /* ChapterAttendenceViewController.swift */,
 				D5295664240A176000DA3BE4 /* ChapterQAViewController.swift */,
+				D5295666240A18BB00DA3BE4 /* QATableViewCell.swift */,
 			);
 			path = "Chapter ";
 			sourceTree = "<group>";
@@ -378,6 +384,7 @@
 				D57D97722408A3E4002F6DAB /* ViewEventViewController.swift in Sources */,
 				D5C4908E2403162B00595574 /* ChapterHomeViewController.swift in Sources */,
 				D5CD3B482408B63C007E5807 /* StudentViewEventViewController.swift in Sources */,
+				D5295667240A18BB00DA3BE4 /* QATableViewCell.swift in Sources */,
 				D5295663240A0F3300DA3BE4 /* ChapterAttendenceViewController.swift in Sources */,
 				D566AF93240626330046E9D3 /* RequestTableViewCell.swift in Sources */,
 				D566AF9124061F450046E9D3 /* StudentTableViewCell.swift in Sources */,
@@ -393,6 +400,7 @@
 				D5CD3B4C2408CEB9007E5807 /* ScanEventViewController.swift in Sources */,
 				D50F98EF23FF1AE80023BE76 /* FBLAApp.xcdatamodeld in Sources */,
 				D5C4908C2402F29000595574 /* StudentRequestViewController.swift in Sources */,
+				D5295669240A1EA500DA3BE4 /* StudentQAViewController.swift in Sources */,
 				D566AF8F24061F110046E9D3 /* StudentsRequestsViewController.swift in Sources */,
 				D5AE0A9324075E56008D0689 /* ChapterProfileViewController.swift in Sources */,
 				D5A4F1E72406414F004320A2 /* Constants.swift in Sources */,
