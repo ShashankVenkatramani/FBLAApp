@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import FirebaseFirestore
 import FirebaseAuth
+//Checked by Rishabh Mudradi
 class RegisterUserViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
@@ -31,6 +32,7 @@ class RegisterUserViewController: UIViewController {
                 AVCaptureDevice.requestAccess(for: .video) { granted in
                     if granted {
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        //Fixed error, ran from main dispatch
                         DispatchQueue.main.async {
                             let viewController = storyboard.instantiateViewController(identifier: "ScanClassViewController") as! ScanClassViewController
                             viewController.modalPresentationStyle = .fullScreen
@@ -57,6 +59,7 @@ class RegisterUserViewController: UIViewController {
                         if password == confirmPassword {
                             Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                                 if let user = user {
+                                    //update fields for students and chapters in database
                                     db.collection("students").document(user.user.uid).setData(["name" : name, "email" : email, "chapterUID" : "", "requestUID" : self.centerID!]){err in
                                         if let err = err {
                                             print("Error writing user document: \(err)")

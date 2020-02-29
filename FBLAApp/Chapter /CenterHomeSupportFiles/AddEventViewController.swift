@@ -39,6 +39,16 @@ class AddEventViewController: UIDGuardedViewController {
         
         startTimeTextField.inputView = startDatePicker
         endTimeTextField.inputView = endDatePicker
+        
+        eventDescription.backgroundColor = UIColor.white
+        eventDescription.layer.cornerRadius = 10
+        
+        eventDescription.layer.shadowColor = Colors.orange.cgColor
+        eventDescription.layer.shadowOffset = CGSize(width: 2, height: 2)
+        eventDescription.layer.shadowRadius = 6
+        eventDescription.layer.shadowOpacity = 1
+        
+        eventDescription.clipsToBounds = false
     }
     
     @objc func startDateChanged(datePicker: UIDatePicker) {

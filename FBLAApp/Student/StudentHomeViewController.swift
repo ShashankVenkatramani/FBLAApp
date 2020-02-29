@@ -110,6 +110,16 @@ class StudentHomeViewController: UIDGuardedViewController {
         linkButton.addTarget(self, action: #selector(linkButtonPressed), for: .touchUpInside)
         linkButton.setImage(UIImage(named: "link"), for: .normal)
         
+        let officerButton = UIButton()
+        officerButton.translatesAutoresizingMaskIntoConstraints = false
+        sideView.addSubview(officerButton)
+        officerButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        officerButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        officerButton.topAnchor.constraint(equalTo: linkButton.bottomAnchor, constant: 20).isActive = true
+        officerButton.leftAnchor.constraint(equalTo: sideView.leftAnchor, constant: 20).isActive = true
+        officerButton.addTarget(self, action: #selector(officerButtonPressed), for: .touchUpInside)
+        officerButton.setImage(UIImage(named: "tie"), for: .normal)
+        
         let logoutButton = UIButton()
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
         sideView.addSubview(logoutButton)
@@ -120,6 +130,15 @@ class StudentHomeViewController: UIDGuardedViewController {
         logoutButton.addTarget(self, action: #selector(menuLogout), for: .touchUpInside)
         logoutButton.setImage(UIImage(named: "logout"), for: .normal)
         
+        let profileButton = UIButton()
+        profileButton.translatesAutoresizingMaskIntoConstraints = false
+        sideView.addSubview(profileButton)
+        profileButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        profileButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        profileButton.bottomAnchor.constraint(equalTo: logoutButton.topAnchor, constant: -20).isActive = true
+        profileButton.leftAnchor.constraint(equalTo: sideView.leftAnchor, constant: 20).isActive = true
+        profileButton.addTarget(self, action: #selector(profileButtonPressed), for: .touchUpInside)
+        profileButton.setImage(UIImage(named: "info"), for: .normal)
         
         return sideView
     }()
@@ -154,6 +173,20 @@ class StudentHomeViewController: UIDGuardedViewController {
     @objc func linkButtonPressed() {
         let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "StudentLinkViewController") as! StudentLinkViewController
+        viewController.uid = uid
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: false, completion: nil)
+    }
+    @objc func officerButtonPressed() {
+        let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "StudentOfficerViewController") as! StudentOfficerViewController
+        viewController.uid = uid
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: false, completion: nil)
+    }
+    @objc func profileButtonPressed() {
+        let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "StudentProfileViewController") as! StudentProfileViewController
         viewController.uid = uid
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: false, completion: nil)

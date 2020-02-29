@@ -2,17 +2,24 @@
 //  LoginViewController.swift
 //  FBLAApp
 //
-//  Created by Shanky(Prgm) on 2/20/20.
-//  Copyright © 2020 Shashank Venkatramani. All rights reserved.
+//  Created by Vishal Shenoy on 2/20/20.
+//  Copyright © 2020 Vishal Shenoy. All rights reserved.
 //
 
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
-
+//Checked by Shashank V
 class LoginViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var logoImageView: UIImageView!
+    @IBAction func googleButtonPressed(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://accounts.google.com/Login")!)
+    }
+    @IBAction func facebookButtonPressed(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.facebook.com/login.php")!)
+    }
     
     @IBAction func logInButtonPressed(_ sender: Any) {
         var db = Firestore.firestore()
@@ -36,8 +43,8 @@ class LoginViewController: UIViewController {
                         ownerPathTest.getDocument {(document, error) in
                             if let document = document {
                                 if document.exists {
-                                    let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
-                                    let viewController = storyboard.instantiateViewController(identifier: "ChapterHomeViewController") as! ChapterHomeViewController
+                                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                    let viewController = storyboard.instantiateViewController(identifier: "OnloadOneViewController") as! OnloadOneViewController
                                     viewController.uid = uid
                                     viewController.modalPresentationStyle = .fullScreen
                                     self.present(viewController, animated: true, completion: nil)
@@ -59,13 +66,14 @@ class LoginViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        logoImageView.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(_ animated: Bool) {
         var user = Auth.auth().currentUser
         var db = Firestore.firestore()
         if user != nil {
+            //Check if user is a student
             let uid = user!.uid
             let studentPathTest = db.collection("students").document(uid)
             studentPathTest.getDocument { (document, error) in
@@ -79,6 +87,7 @@ class LoginViewController: UIViewController {
                     }
                 }
             }
+            //Check if user is a chapter
             let chapterPathTest = db.collection("chapters").document(uid)
             chapterPathTest.getDocument { (document, error) in
                 if let document = document {

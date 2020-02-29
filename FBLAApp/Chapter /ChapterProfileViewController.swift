@@ -122,7 +122,7 @@ class ChapterProfileViewController: UIDGuardedViewController {
         profileButton.bottomAnchor.constraint(equalTo: logoutButton.topAnchor, constant: -20).isActive = true
         profileButton.leftAnchor.constraint(equalTo: sideView.leftAnchor, constant: 20).isActive = true
         //profileButton.addTarget(self, action: #selector(profileButtonPressed), for: .touchUpInside)
-        profileButton.setImage(UIImage(named: "profile"), for: .normal)
+        profileButton.setImage(UIImage(named: "info"), for: .normal)
         
         return sideView
     }()
@@ -189,6 +189,12 @@ class ChapterProfileViewController: UIDGuardedViewController {
             ])
     }
     //: end side menu
+    @IBAction func termsButtonPressed(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://drive.google.com/file/d/1iV403GgOo0yXEpCR5-OORQs_VkK_LB_c/view?usp=sharing")!)
+    }
+    @IBAction func viewCompEventsButtonPressed(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.fbla-pbl.org/fbla/competitive-events/")!)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpMenu()

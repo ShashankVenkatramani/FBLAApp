@@ -12,6 +12,7 @@ class OfficerTableViewCell: UITableViewCell {
 
     @IBOutlet var nameTextField: UILabel!
     @IBOutlet var positionTextField: UILabel!
+    @IBOutlet var customView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

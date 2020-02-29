@@ -26,10 +26,6 @@ class ViewEventViewController: UIDGuardedViewController {
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
     }
-    @IBAction func saveEventButtonPressed(_ sender: Any) {
-    }
-    @IBAction func deleteEventButtonPressed(_ sender: Any) {
-    }
     override func viewDidLoad() {
         if event == nil || event?.uid == "none"{
         } else {
@@ -46,6 +42,14 @@ class ViewEventViewController: UIDGuardedViewController {
                 }
             }
         }
+        descriptionTextView.backgroundColor = UIColor.white
+        descriptionTextView.layer.cornerRadius = 10
+        
+        descriptionTextView.layer.shadowColor = Colors.orange.cgColor
+        descriptionTextView.layer.shadowOffset = CGSize(width: 2, height: 2)
+        descriptionTextView.layer.shadowRadius = 6
+        descriptionTextView.layer.shadowOpacity = 1
+        descriptionTextView.clipsToBounds = false
     }
     override func viewDidAppear(_ animated: Bool) {
         if event == nil || event?.uid == "none"{

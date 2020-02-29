@@ -2,14 +2,14 @@
 //  ChapterTestViewController.swift
 //  FBLAApp
 //
-//  Created by Shanky(Prgm) on 2/21/20.
-//  Copyright © 2020 Shashank Venkatramani. All rights reserved.
+//  Created by Rishabh on 2/21/20.
+//  Copyright © 2020 Rishabh Mudradi. All rights reserved.
 //
 
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
-
+//Checked by Vishal shenoy
 class ChapterTestViewController: UIDGuardedViewController {
     @IBOutlet var testLabel: UILabel!
     @IBOutlet var QRCodeImageView: UIImageView!

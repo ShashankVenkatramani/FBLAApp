@@ -126,7 +126,7 @@ class ChapterQAViewController: UIDGuardedViewController {
         profileButton.bottomAnchor.constraint(equalTo: logoutButton.topAnchor, constant: -20).isActive = true
         profileButton.leftAnchor.constraint(equalTo: sideView.leftAnchor, constant: 20).isActive = true
         profileButton.addTarget(self, action: #selector(profileButtonPressed), for: .touchUpInside)
-        profileButton.setImage(UIImage(named: "profile"), for: .normal)
+        profileButton.setImage(UIImage(named: "info"), for: .normal)
         
         return sideView
     }()

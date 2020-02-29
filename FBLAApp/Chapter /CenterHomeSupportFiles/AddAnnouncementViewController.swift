@@ -19,6 +19,16 @@ class AddAnnouncementViewController: UIDGuardedViewController {
         viewController.uid = uid
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
+        
+        announcementTextView.backgroundColor = UIColor.white
+        announcementTextView.layer.cornerRadius = 10
+        
+        announcementTextView.layer.shadowColor = Colors.orange.cgColor
+        announcementTextView.layer.shadowOffset = CGSize(width: 2, height: 2)
+        announcementTextView.layer.shadowRadius = 6
+        announcementTextView.layer.shadowOpacity = 1
+        
+        announcementTextView.clipsToBounds = false
     }
     @IBAction func addAnnouncementButtonPressed(_ sender: Any) {
         let db = Firestore.firestore()

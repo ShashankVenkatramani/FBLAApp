@@ -10,7 +10,7 @@ import UIKit
 import FirebaseFirestore
 import FirebaseAuth
 import CoreData
-
+//Checked by Rishabh
 class RegisterChapterViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var chapterNameTextField: UITextField!
@@ -27,6 +27,7 @@ class RegisterChapterViewController: UIViewController {
                             if password == confirmPassword {
                                 Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                                     if let user = user {
+                                        //Might remove latitude longitude
                                         db.collection("chapters").document(user.user.uid).setData(["chapterName" : centerName, "name" : name, "email" : email, "address" : "", "chapterImageLink" : "", "chapterLink" : "", "latitude" : -1000, "longitude" : -1000, "profileImageLink" : ""]){ err in
                                             if let err = err {
                                                 print("Error writing document: \(err)")

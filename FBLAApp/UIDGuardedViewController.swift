@@ -5,7 +5,7 @@
 //  Created by Shanky(Prgm) on 2/21/20.
 //  Copyright © 2020 Shashank Venkatramani. All rights reserved.
 //
-
+//Checked by Vishal
 import UIKit
 import Firebase
 class UIDGuardedViewController: UIViewController {
@@ -14,7 +14,7 @@ class UIDGuardedViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    
+    //Makes sure all view controllers have the uid set in place
     override func viewDidAppear(_ animated: Bool) {
         if uid == nil {
             let alert = UIAlertController(title: "Sign In Error", message: "It appears your account has signed out due to an internal  app error. Please try reloggging in", preferredStyle: .alert)

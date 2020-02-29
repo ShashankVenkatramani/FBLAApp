@@ -126,7 +126,7 @@ class ChapterOfficerViewController: UIDGuardedViewController {
         profileButton.bottomAnchor.constraint(equalTo: logoutButton.topAnchor, constant: -20).isActive = true
         profileButton.leftAnchor.constraint(equalTo: sideView.leftAnchor, constant: 20).isActive = true
         profileButton.addTarget(self, action: #selector(profileButtonPressed), for: .touchUpInside)
-        profileButton.setImage(UIImage(named: "profile"), for: .normal)
+        profileButton.setImage(UIImage(named: "info"), for: .normal)
         
         return sideView
     }()
@@ -233,6 +233,14 @@ extension ChapterOfficerViewController: UITableViewDelegate, UITableViewDataSour
         let cell = officersTableView.dequeueReusableCell(withIdentifier: "OfficerTableViewCell") as! OfficerTableViewCell
         cell.nameTextField.text = officers[indexPath.row].name
         cell.positionTextField.text = officers[indexPath.row].position
+        
+        cell.customView.layer.cornerRadius = 10
+        
+        cell.customView.layer.shadowColor = Colors.purple.cgColor
+        cell.customView.layer.shadowOffset = CGSize(width: 2, height: 2)
+        cell.customView.layer.shadowRadius = 6
+        cell.customView.layer.shadowOpacity = 1
+        
         return cell
     }
     
