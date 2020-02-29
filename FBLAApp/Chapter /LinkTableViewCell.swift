@@ -10,6 +10,7 @@ import UIKit
 
 class LinkTableViewCell: UITableViewCell {
     @IBOutlet var linkTextLabel: UILabel!
+    @IBOutlet var customView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

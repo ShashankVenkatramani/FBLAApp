@@ -84,6 +84,16 @@ class StudentQAViewController: UIDGuardedViewController {
         //qaButton.addTarget(self, action: #selector(qaButtonPressed), for: .touchUpInside)
         qaButton.setImage(UIImage(named: "qa"), for: .normal)
         
+        let linkButton = UIButton()
+        linkButton.translatesAutoresizingMaskIntoConstraints = false
+        sideView.addSubview(linkButton)
+        linkButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        linkButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        linkButton.topAnchor.constraint(equalTo: qaButton.bottomAnchor, constant: 20).isActive = true
+        linkButton.leftAnchor.constraint(equalTo: sideView.leftAnchor, constant: 20).isActive = true
+        linkButton.addTarget(self, action: #selector(linkButtonPressed), for: .touchUpInside)
+        linkButton.setImage(UIImage(named: "link"), for: .normal)
+        
         let logoutButton = UIButton()
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
         sideView.addSubview(logoutButton)
@@ -121,6 +131,13 @@ class StudentQAViewController: UIDGuardedViewController {
     @objc func qaButtonPressed() {
         let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "StudentQAViewController") as! StudentQAViewController
+        viewController.uid = uid
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: false, completion: nil)
+    }
+    @objc func linkButtonPressed() {
+        let storyboard = UIStoryboard(name: "StudentViews", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "StudentLinkViewController") as! StudentLinkViewController
         viewController.uid = uid
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: false, completion: nil)

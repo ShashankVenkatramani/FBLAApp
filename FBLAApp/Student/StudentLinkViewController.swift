@@ -1,29 +1,19 @@
 //
-//  StudentAttendenceViewController.swift
+//  StudentLinkViewController.swift
 //  FBLAApp
 //
-//  Created by Shanky(Prgm) on 2/27/20.
+//  Created by Shanky(Prgm) on 2/28/20.
 //  Copyright © 2020 Shashank Venkatramani. All rights reserved.
 //
 
 import UIKit
-import FirebaseAuth
 import FirebaseFirestore
-struct StudentAttendence {
-    var name: String
-    var desc: String
-}
-struct EventID {
-    var id: String
-    var event: Bool
-}
-class StudentAttendenceViewController: UIDGuardedViewController {
-    @IBOutlet var attendenceTableView: UITableView!
+import FirebaseAuth
+class StudentLinkViewController: UIDGuardedViewController {
     //: Start menu bar
     @IBAction func menuButtonPressed(_ sender: Any) {
         switchMenuState()
     }
-    
     
     
     @objc func switchMenuState() {
@@ -81,7 +71,7 @@ class StudentAttendenceViewController: UIDGuardedViewController {
         attendenceButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         attendenceButton.topAnchor.constraint(equalTo: homeButton.bottomAnchor, constant: 20).isActive = true
         attendenceButton.leftAnchor.constraint(equalTo: sideView.leftAnchor, constant: 20).isActive = true
-        //attendenceButton.addTarget(self, action: #selector(attendenceButtonPressed), for: .touchUpInside)
+        attendenceButton.addTarget(self, action: #selector(attendenceButtonPressed), for: .touchUpInside)
         attendenceButton.setImage(UIImage(named: "attendance"), for: .normal)
         
         let qaButton = UIButton()
@@ -101,7 +91,7 @@ class StudentAttendenceViewController: UIDGuardedViewController {
         linkButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         linkButton.topAnchor.constraint(equalTo: qaButton.bottomAnchor, constant: 20).isActive = true
         linkButton.leftAnchor.constraint(equalTo: sideView.leftAnchor, constant: 20).isActive = true
-        linkButton.addTarget(self, action: #selector(linkButtonPressed), for: .touchUpInside)
+        //linkButton.addTarget(self, action: #selector(linkButtonPressed), for: .touchUpInside)
         linkButton.setImage(UIImage(named: "link"), for: .normal)
         
         let logoutButton = UIButton()
@@ -152,6 +142,7 @@ class StudentAttendenceViewController: UIDGuardedViewController {
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: false, completion: nil)
     }
+    
     //run in view did load
     func setUpMenu() {
         view.addSubview(sideMenu)
@@ -166,62 +157,53 @@ class StudentAttendenceViewController: UIDGuardedViewController {
             ])
     }
     //: End menu bar
-    var attendenceRecords:[StudentAttendence] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setUpMenu()
-        attendenceTableView.delegate = self
-        attendenceTableView.dataSource = self
-        downloadData()
+        linksTableView.delegate = self
+        linksTableView.dataSource = self
+        downloadLinks()
     }
-    func downloadData() {
-        attendenceRecords = []
+    @IBOutlet var linksTableView: UITableView!
+    var links:[CustomLink] = []
+    func downloadLinks() {
         let db = Firestore.firestore()
         db.collection("students").document(self.uid!).getDocument { (studentDocument, error) in
-            let studentDocumentData = studentDocument?.data()
-            var eventUIDs:[EventID] = []
-            if let eventDict = studentDocumentData!["events"] as! NSMutableDictionary? {
-                for (eventUID, status) in eventDict {
-                    eventUIDs.append(EventID(id: eventUID as! String, event: true))
-                }
-            }
-            db.collection("chapters").document(studentDocumentData!["chapterUID"] as! String).collection("events").document("events").getDocument { (document, error) in
-                if let eventDict = document?.data() {
-                    for eventUID in eventUIDs {
-                        if eventUID.event {
-                            let eventData = eventDict[eventUID.id] as! NSMutableDictionary
-                            self.attendenceRecords.append(StudentAttendence(name: eventData.value(forKey: "name") as! String, desc: eventData.value(forKey: "description") as! String))
+            if let studentDocumentData = studentDocument!.data() {
+                db.collection("chapters").document(studentDocumentData["chapterUID"] as! String).collection("links").document("links").getDocument { (document, error) in
+                    if let documentData = document!.data() {
+                        for (site, link) in documentData {
+                            self.links.append(CustomLink(name: site as! String, link: link as! String))
                         }
+                        self.linksTableView.reloadData()
                     }
-                    self.attendenceTableView.reloadData()
                 }
             }
         }
+        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-extension StudentAttendenceViewController: UITableViewDataSource, UITableViewDelegate {
+extension StudentLinkViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return attendenceRecords.count
+        return links.count
     }
-    
+        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = attendenceTableView.dequeueReusableCell(withIdentifier: "StudentAttendenceTableViewCell") as! StudentAttendenceTableViewCell
-        cell.nameLabel.text = attendenceRecords[indexPath.row].name
-        cell.descLabel.text = attendenceRecords[indexPath.row].desc
+        let cell = linksTableView.dequeueReusableCell(withIdentifier: "LinkTableViewCell") as! LinkTableViewCell
+        cell.linkTextLabel.text = links[indexPath.row].name
+        cell.customView.layer.cornerRadius = 10
+                
+        cell.layer.shadowColor = Colors.purple.cgColor
+        cell.layer.shadowOffset = CGSize(width: 2, height: 2)
+        cell.layer.shadowRadius = 6
+        cell.layer.shadowOpacity = 1
         return cell
     }
-    
-    
+        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let link = links[indexPath.row].link
+        UIApplication.shared.open(URL(string: link as! String)!)
+    }
 }
+

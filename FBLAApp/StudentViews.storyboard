@@ -11,7 +11,7 @@
         <!--Student Request View Controller-->
         <scene sceneID="LAh-Qf-7JX">
             <objects>
-                <viewController storyboardIdentifier="StudentRequestViewController" id="YP9-vL-tIA" customClass="StudentRequestViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StudentRequestViewController" id="YP9-vL-tIA" customClass="StudentRequestViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g9r-Oj-Di0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,7 +61,7 @@
         <!--Student Home View Controller-->
         <scene sceneID="O4q-W8-C8G">
             <objects>
-                <viewController storyboardIdentifier="StudentHomeViewController" id="GCi-8n-CJy" customClass="StudentHomeViewController" customModule="FBLAApp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StudentHomeViewController" id="GCi-8n-CJy" customClass="StudentHomeViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MYh-XN-DjQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +224,7 @@
         <!--Scan Event View Controller-->
         <scene sceneID="Zv3-XZ-w3B">
             <objects>
-                <viewController storyboardIdentifier="ScanEventViewController" id="MrY-UH-Ybz" customClass="ScanEventViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScanEventViewController" id="MrY-UH-Ybz" customClass="ScanEventViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s3H-sz-OMQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,7 +239,7 @@
         <!--Student Attendence View Controller-->
         <scene sceneID="Olc-wo-mUE">
             <objects>
-                <viewController storyboardIdentifier="StudentAttendenceViewController" id="1MV-ez-v79" customClass="StudentAttendenceViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StudentAttendenceViewController" id="1MV-ez-v79" customClass="StudentAttendenceViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9yX-lY-nyB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -334,7 +334,7 @@
         <!--Student View Event View Controller-->
         <scene sceneID="z79-HL-sTs">
             <objects>
-                <viewController storyboardIdentifier="StudentViewEventViewController" id="0Tm-Ve-yxf" customClass="StudentViewEventViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StudentViewEventViewController" id="0Tm-Ve-yxf" customClass="StudentViewEventViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xP9-ap-xlz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -446,7 +446,7 @@
         <!--Student View Meeting View Controller-->
         <scene sceneID="kVF-Re-rOH">
             <objects>
-                <viewController storyboardIdentifier="StudentViewMeetingViewController" id="sRx-fS-zMC" customClass="StudentViewMeetingViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StudentViewMeetingViewController" id="sRx-fS-zMC" customClass="StudentViewMeetingViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7tW-de-z4s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -558,7 +558,7 @@
         <!--StudentQA View Controller-->
         <scene sceneID="uZr-Dx-hol">
             <objects>
-                <viewController storyboardIdentifier="StudentQAViewController" id="hXD-hY-6yr" customClass="StudentQAViewController" customModule="FBLAApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StudentQAViewController" id="hXD-hY-6yr" customClass="StudentQAViewController" customModule="Oasis" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M8E-5F-4Ig">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -664,6 +664,105 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cub-wR-u9O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1772" y="110"/>
+        </scene>
+        <!--Student Link View Controller-->
+        <scene sceneID="Adm-E8-j4b">
+            <objects>
+                <viewController storyboardIdentifier="StudentLinkViewController" id="j7t-3N-BG0" customClass="StudentLinkViewController" customModule="Oasis" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oZY-5D-EZn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundTwoCircle" translatesAutoresizingMaskIntoConstraints="NO" id="sfS-h6-swP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AZ-VX-YKy">
+                                <rect key="frame" x="20" y="60" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LBG-6B-RUN"/>
+                                    <constraint firstAttribute="width" constant="40" id="bZt-6C-drJ"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="menuButton"/>
+                                <connections>
+                                    <action selector="menuButtonPressed:" destination="j7t-3N-BG0" eventType="touchUpInside" id="iOC-0V-Lym"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o6I-sd-9fe">
+                                <rect key="frame" x="50" y="190.5" width="314" height="621.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LinkTableViewCell" rowHeight="90" id="UiM-nn-Y2q" customClass="LinkTableViewCell" customModule="FBLAApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="314" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UiM-nn-Y2q" id="evW-jh-rY9">
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfo-8R-9Nh">
+                                                    <rect key="frame" x="12" y="12" width="290" height="66"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04c-kR-lYq">
+                                                            <rect key="frame" x="10" y="0.0" width="280" height="66"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="04c-kR-lYq" firstAttribute="leading" secondItem="lfo-8R-9Nh" secondAttribute="leading" constant="10" id="NYi-bE-9dv"/>
+                                                        <constraint firstAttribute="bottom" secondItem="04c-kR-lYq" secondAttribute="bottom" id="Tsw-fG-JwH"/>
+                                                        <constraint firstItem="04c-kR-lYq" firstAttribute="top" secondItem="lfo-8R-9Nh" secondAttribute="top" id="VKV-S7-mfx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="04c-kR-lYq" secondAttribute="trailing" id="o6N-Rd-XyX"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lfo-8R-9Nh" firstAttribute="leading" secondItem="evW-jh-rY9" secondAttribute="leading" constant="12" id="3hV-tP-TGr"/>
+                                                <constraint firstAttribute="trailing" secondItem="lfo-8R-9Nh" secondAttribute="trailing" constant="12" id="7Gc-Fv-dJC"/>
+                                                <constraint firstItem="lfo-8R-9Nh" firstAttribute="top" secondItem="evW-jh-rY9" secondAttribute="top" constant="12" id="til-Q2-A4r"/>
+                                                <constraint firstAttribute="bottom" secondItem="lfo-8R-9Nh" secondAttribute="bottom" constant="12" id="tmZ-hM-gWq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="customView" destination="lfo-8R-9Nh" id="vt2-KC-9eY"/>
+                                            <outlet property="linkTextLabel" destination="04c-kR-lYq" id="UrI-lI-hk3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Links" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceC-GP-dVT">
+                                <rect key="frame" x="182" y="64" width="50" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sfS-h6-swP" firstAttribute="top" secondItem="oZY-5D-EZn" secondAttribute="top" id="0vF-0a-xd4"/>
+                            <constraint firstItem="sce-iz-8Ii" firstAttribute="trailing" secondItem="o6I-sd-9fe" secondAttribute="trailing" constant="50" id="2n9-r9-5Bq"/>
+                            <constraint firstItem="ceC-GP-dVT" firstAttribute="centerX" secondItem="sfS-h6-swP" secondAttribute="centerX" id="Dx3-3Z-QUj"/>
+                            <constraint firstItem="6AZ-VX-YKy" firstAttribute="leading" secondItem="sce-iz-8Ii" secondAttribute="leading" constant="20" id="HmH-dH-guT"/>
+                            <constraint firstItem="6AZ-VX-YKy" firstAttribute="top" secondItem="sce-iz-8Ii" secondAttribute="top" constant="16" id="MTs-PG-c1K"/>
+                            <constraint firstAttribute="bottom" secondItem="sfS-h6-swP" secondAttribute="bottom" id="SV2-XE-bC8"/>
+                            <constraint firstItem="ceC-GP-dVT" firstAttribute="top" secondItem="sce-iz-8Ii" secondAttribute="top" constant="20" id="UQk-qZ-Pys"/>
+                            <constraint firstItem="o6I-sd-9fe" firstAttribute="leading" secondItem="sce-iz-8Ii" secondAttribute="leading" constant="50" id="W2v-7X-0eP"/>
+                            <constraint firstItem="o6I-sd-9fe" firstAttribute="top" secondItem="ceC-GP-dVT" secondAttribute="bottom" constant="100" id="e2e-xr-Kl4"/>
+                            <constraint firstItem="sfS-h6-swP" firstAttribute="leading" secondItem="sce-iz-8Ii" secondAttribute="leading" id="fRX-rO-aPa"/>
+                            <constraint firstItem="sfS-h6-swP" firstAttribute="trailing" secondItem="sce-iz-8Ii" secondAttribute="trailing" id="jKM-es-4Ha"/>
+                            <constraint firstItem="sce-iz-8Ii" firstAttribute="bottom" secondItem="o6I-sd-9fe" secondAttribute="bottom" constant="50" id="qip-Jv-wTw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sce-iz-8Ii"/>
+                    </view>
+                    <connections>
+                        <outlet property="linksTableView" destination="o6I-sd-9fe" id="DAa-rb-tWs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUJ-iM-UU9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2362" y="-591"/>
         </scene>
     </scenes>
     <resources>

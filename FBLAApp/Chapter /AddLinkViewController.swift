@@ -7,8 +7,26 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class AddLinkViewController: UIDGuardedViewController {
+    @IBOutlet var siteNameTextField: UITextField!
+    @IBOutlet var linkTextField: UITextField!
+    @IBAction func addLinkButtonPressed(_ sender: Any) {
+        let db = Firestore.firestore()
+        db.collection("chapters").document(self.uid!).collection("links").document("links").setData([siteNameTextField.text! : linkTextField.text!], merge: true){err in
+            if let err = err {
+                print("Error writing request document: \(err)")
+            } else {
+                print("Document succesfully written")
+                let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
+                let viewController = storyboard.instantiateViewController(identifier: "ChapterLinkViewController") as! ChapterLinkViewController
+                viewController.uid = self.uid
+                viewController.modalPresentationStyle = .fullScreen
+                self.present(viewController, animated: false, completion: nil)
+            }
+        }
+    }
     @IBAction func closeButtonPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "ChapterLinkViewController") as! ChapterLinkViewController
@@ -22,16 +40,7 @@ class AddLinkViewController: UIDGuardedViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-    */
-
 }

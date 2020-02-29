@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 struct CustomLink {
     var name:String
     var link:String
@@ -180,6 +181,7 @@ class ChapterLinkViewController: UIDGuardedViewController {
         setUpMenu()
         linksTableView.delegate = self
         linksTableView.dataSource = self
+        downloadLinks()
     }
     @IBOutlet var linksTableView: UITableView!
     var links:[CustomLink] = []
@@ -189,6 +191,17 @@ class ChapterLinkViewController: UIDGuardedViewController {
         viewController.uid = uid
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: false, completion: nil)
+    }
+    func downloadLinks() {
+        let db = Firestore.firestore()
+        db.collection("chapters").document(self.uid!).collection("links").document("links").getDocument { (document, error) in
+            if let documentData = document!.data() {
+                for (site, link) in documentData {
+                    self.links.append(CustomLink(name: site as! String, link: link as! String))
+                }
+                self.linksTableView.reloadData()
+            }
+        }
     }
 }
 
@@ -200,6 +213,17 @@ extension ChapterLinkViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = linksTableView.dequeueReusableCell(withIdentifier: "LinkTableViewCell") as! LinkTableViewCell
         cell.linkTextLabel.text = links[indexPath.row].name
+        cell.customView.layer.cornerRadius = 10
+            
+        cell.layer.shadowColor = Colors.purple.cgColor
+        cell.layer.shadowOffset = CGSize(width: 2, height: 2)
+        cell.layer.shadowRadius = 6
+        cell.layer.shadowOpacity = 1
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let link = links[indexPath.row].link
+        UIApplication.shared.open(URL(string: link as! String)!)
     }
 }

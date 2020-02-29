@@ -23,6 +23,7 @@
 		D5295665240A176000DA3BE4 /* ChapterQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5295664240A176000DA3BE4 /* ChapterQAViewController.swift */; };
 		D5295667240A18BB00DA3BE4 /* QATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5295666240A18BB00DA3BE4 /* QATableViewCell.swift */; };
 		D5295669240A1EA500DA3BE4 /* StudentQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5295668240A1EA500DA3BE4 /* StudentQAViewController.swift */; };
+		D529566B240A2FEB00DA3BE4 /* StudentLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D529566A240A2FEB00DA3BE4 /* StudentLinkViewController.swift */; };
 		D566AF8F24061F110046E9D3 /* StudentsRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566AF8E24061F110046E9D3 /* StudentsRequestsViewController.swift */; };
 		D566AF9124061F450046E9D3 /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566AF9024061F450046E9D3 /* StudentTableViewCell.swift */; };
 		D566AF93240626330046E9D3 /* RequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566AF92240626330046E9D3 /* RequestTableViewCell.swift */; };
@@ -55,7 +56,7 @@
 		A684140A77123EE66357ACA6 /* Pods-FBLAApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBLAApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBLAApp/Pods-FBLAApp.debug.xcconfig"; sourceTree = "<group>"; };
 		ADF4F5B9D0B3EEC353577F98 /* Pods_FBLAApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FBLAApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A2CCB279FD10772D2D5C0F /* Pods-FBLAApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBLAApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBLAApp/Pods-FBLAApp.release.xcconfig"; sourceTree = "<group>"; };
-		D50F98E123FF1AE80023BE76 /* FBLAApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBLAApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D50F98E123FF1AE80023BE76 /* Oasis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oasis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50F98E423FF1AE80023BE76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D50F98E623FF1AE80023BE76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D50F98EB23FF1AE80023BE76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		D5295664240A176000DA3BE4 /* ChapterQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterQAViewController.swift; sourceTree = "<group>"; };
 		D5295666240A18BB00DA3BE4 /* QATableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QATableViewCell.swift; sourceTree = "<group>"; };
 		D5295668240A1EA500DA3BE4 /* StudentQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentQAViewController.swift; sourceTree = "<group>"; };
+		D529566A240A2FEB00DA3BE4 /* StudentLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLinkViewController.swift; sourceTree = "<group>"; };
 		D566AF8E24061F110046E9D3 /* StudentsRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsRequestsViewController.swift; sourceTree = "<group>"; };
 		D566AF9024061F450046E9D3 /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
 		D566AF92240626330046E9D3 /* RequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTableViewCell.swift; sourceTree = "<group>"; };
@@ -142,7 +144,7 @@
 		D50F98E223FF1AE80023BE76 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D50F98E123FF1AE80023BE76 /* FBLAApp.app */,
+				D50F98E123FF1AE80023BE76 /* Oasis.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,6 +180,7 @@
 				D5CD3B4E2408E7D7007E5807 /* StudentAttendenceViewController.swift */,
 				D5CD3B502408EB5F007E5807 /* StudentAttendenceTableViewCell.swift */,
 				D5295668240A1EA500DA3BE4 /* StudentQAViewController.swift */,
+				D529566A240A2FEB00DA3BE4 /* StudentLinkViewController.swift */,
 				D5CD3B4D2408E5E9007E5807 /* StudentHomeViewSupportFiles */,
 			);
 			path = Student;
@@ -263,7 +266,7 @@
 			);
 			name = FBLAApp;
 			productName = FBLAApp;
-			productReference = D50F98E123FF1AE80023BE76 /* FBLAApp.app */;
+			productReference = D50F98E123FF1AE80023BE76 /* Oasis.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -386,6 +389,7 @@
 				D5CD3B482408B63C007E5807 /* StudentViewEventViewController.swift in Sources */,
 				D5295667240A18BB00DA3BE4 /* QATableViewCell.swift in Sources */,
 				D5295663240A0F3300DA3BE4 /* ChapterAttendenceViewController.swift in Sources */,
+				D529566B240A2FEB00DA3BE4 /* StudentLinkViewController.swift in Sources */,
 				D566AF93240626330046E9D3 /* RequestTableViewCell.swift in Sources */,
 				D566AF9124061F450046E9D3 /* StudentTableViewCell.swift in Sources */,
 				D5CD3B4F2408E7D7007E5807 /* StudentAttendenceViewController.swift in Sources */,
@@ -560,7 +564,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cvenkatramani.FBLAApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Oasis;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -579,7 +583,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cvenkatramani.FBLAApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Oasis;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
