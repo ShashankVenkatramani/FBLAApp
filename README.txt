@@ -80,7 +80,7 @@ When prompted for a device type, select any iOS device. Enjoy Oasis!
 To run Oasis on a physical iPhone:
 First download the Xcode file project "FBLAApp". When opened, find and open the Xcode file project 
 titled "FBLAApp.xcworkspace". When opened, click the run button at the top left corner next to screen
-maximize button. Any iPhone with iOS 10.0+ will run Oasis adequately. When promoted to select
+maximize button. Any iPhone with iOS 10.0+ will run Oasis adequately. When prompted to select
 a device scroll and select your device's name. Ensure to accept any prompts that may pop up when running. 
 Additionally if asked to trust the developer, go to Settings and then General. Scroll down to device 
 management and trust the developer to enable permission to run Oasis 
