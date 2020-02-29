@@ -174,7 +174,7 @@ class StudentAttendenceViewController: UIDGuardedViewController {
                 if let eventDict = document?.data(){
                     for eventUID in eventUIDs {
                         if !eventUID.event {
-                            let eventData = eventDict[eventUID.id] as! NSMutableDictionary
+                            let eventData = eventDict[eventUID.id] as! NSMutableDictionary  
                             self.attendenceRecords.append(StudentAttendence(name: eventData.value(forKey: "name") as! String, desc: eventData.value(forKey: "description") as! String))
                         }
                     }

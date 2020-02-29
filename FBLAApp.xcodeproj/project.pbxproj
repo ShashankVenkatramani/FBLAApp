@@ -43,6 +43,9 @@
 		D5CD3B4C2408CEB9007E5807 /* ScanEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD3B4B2408CEB9007E5807 /* ScanEventViewController.swift */; };
 		D5CD3B4F2408E7D7007E5807 /* StudentAttendenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD3B4E2408E7D7007E5807 /* StudentAttendenceViewController.swift */; };
 		D5CD3B512408EB5F007E5807 /* StudentAttendenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD3B502408EB5F007E5807 /* StudentAttendenceTableViewCell.swift */; };
+		D5D020082409EAF100CC0CD7 /* ChapterLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D020072409EAF100CC0CD7 /* ChapterLinkViewController.swift */; };
+		D5D0200A2409F04000CC0CD7 /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D020092409F04000CC0CD7 /* LinkTableViewCell.swift */; };
+		D5D0200C2409F22200CC0CD7 /* AddLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0200B2409F22200CC0CD7 /* AddLinkViewController.swift */; };
 		D5ED13322400A9E10072705C /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED13312400A9E10072705C /* RegisterUserViewController.swift */; };
 		D5ED13342400AA230072705C /* RegisterChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED13332400AA230072705C /* RegisterChapterViewController.swift */; };
 /* End PBXBuildFile section */
@@ -88,6 +91,9 @@
 		D5CD3B4B2408CEB9007E5807 /* ScanEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanEventViewController.swift; sourceTree = "<group>"; };
 		D5CD3B4E2408E7D7007E5807 /* StudentAttendenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAttendenceViewController.swift; sourceTree = "<group>"; };
 		D5CD3B502408EB5F007E5807 /* StudentAttendenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAttendenceTableViewCell.swift; sourceTree = "<group>"; };
+		D5D020072409EAF100CC0CD7 /* ChapterLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterLinkViewController.swift; sourceTree = "<group>"; };
+		D5D020092409F04000CC0CD7 /* LinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkTableViewCell.swift; sourceTree = "<group>"; };
+		D5D0200B2409F22200CC0CD7 /* AddLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLinkViewController.swift; sourceTree = "<group>"; };
 		D5ED13312400A9E10072705C /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		D5ED13332400AA230072705C /* RegisterChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterChapterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +188,9 @@
 				D566AF8E24061F110046E9D3 /* StudentsRequestsViewController.swift */,
 				D5AE0A8D2407195E008D0689 /* StudentsRequestsSupportFiles */,
 				D5AE0A9024071ACE008D0689 /* QRCodeChapterViewController.swift */,
+				D5D020072409EAF100CC0CD7 /* ChapterLinkViewController.swift */,
+				D5D0200B2409F22200CC0CD7 /* AddLinkViewController.swift */,
+				D5D020092409F04000CC0CD7 /* LinkTableViewCell.swift */,
 				D5AE0A9224075E56008D0689 /* ChapterProfileViewController.swift */,
 			);
 			path = "Chapter ";
@@ -363,7 +372,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5CD3B4A2408BC16007E5807 /* StudentViewMeetingViewController.swift in Sources */,
+				D5D020082409EAF100CC0CD7 /* ChapterLinkViewController.swift in Sources */,
 				D525804F2404A75900F50FEC /* AddAnnouncementViewController.swift in Sources */,
+				D5D0200C2409F22200CC0CD7 /* AddLinkViewController.swift in Sources */,
+				D5D0200A2409F04000CC0CD7 /* LinkTableViewCell.swift in Sources */,
 				D5BB3F2F2400CAAE00646B5E /* ChapterTestViewController.swift in Sources */,
 				D5C490A02403567800595574 /* AddEventViewController.swift in Sources */,
 				D5C4909D2403172800595574 /* EventCollectionViewCell.swift in Sources */,

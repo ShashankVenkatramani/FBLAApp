@@ -95,6 +95,16 @@ class ChapterHomeViewController: UIDGuardedViewController {
         studentButton.addTarget(self, action: #selector(studentButtonPressed), for: .touchUpInside)
         studentButton.setImage(UIImage(named: "students"), for: .normal)
         
+        let linkButton = UIButton()
+        linkButton.translatesAutoresizingMaskIntoConstraints = false
+        sideView.addSubview(linkButton)
+        linkButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        linkButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        linkButton.topAnchor.constraint(equalTo: studentButton.bottomAnchor, constant: 20).isActive = true
+        linkButton.leftAnchor.constraint(equalTo: sideView.leftAnchor, constant: 20).isActive = true
+        linkButton.addTarget(self, action: #selector(linkButtonPressed), for: .touchUpInside)
+        linkButton.setImage(UIImage(named: "link"), for: .normal)
+        
         let logoutButton = UIButton()
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
         sideView.addSubview(logoutButton)
@@ -141,6 +151,13 @@ class ChapterHomeViewController: UIDGuardedViewController {
     @objc func profileButtonPressed() {
         let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "ChapterProfileViewController") as! ChapterProfileViewController
+        viewController.uid = uid
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: false, completion: nil)
+    }
+    @objc func linkButtonPressed() {
+        let storyboard = UIStoryboard(name: "ChapterViews", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "ChapterLinkViewController") as! ChapterLinkViewController
         viewController.uid = uid
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: false, completion: nil)
@@ -222,10 +239,8 @@ class ChapterHomeViewController: UIDGuardedViewController {
                     let dateNumber = dateFormatter.string(from: date!)
                     let month = monthFormatter.string(from: date!)
                     self.meetings.append(Event(name: meetingDataDictionary.value(forKey: "name") as! String, date: dateNumber, month: month, uid: meetingUID as! String))
-                    print("appending")
                 }
                 meetingLoaded = true
-                print("event " + String(eventLoaded) + " meeting " + String(meetingLoaded))
                 if(eventLoaded && meetingLoaded) {
                     if(self.events.count == 0) {
                         self.events.append(Event(name: "none", date: "", month: "", uid: "none"))
@@ -238,7 +253,6 @@ class ChapterHomeViewController: UIDGuardedViewController {
                 }
             } else {
                 meetingLoaded = true
-                print("event " + String(eventLoaded) + " meeting " + String(meetingLoaded))
                 if(eventLoaded && meetingLoaded) {
                     if(self.events.count == 0) {
                         self.events.append(Event(name: "none", date: "", month: "", uid: "none"))
@@ -253,6 +267,7 @@ class ChapterHomeViewController: UIDGuardedViewController {
         }
         db.collection("chapters").document(self.uid!).collection("events").document("events").getDocument { (centerEventDocument, error) in
             if let centerEventDocumentData = centerEventDocument?.data() {
+                var centerEventDocumentDataDict = centerEventDocumentData as! NSDictionary
                 for (eventUID, eventData) in centerEventDocumentData {
                     let eventDataDictionary = eventData as! NSMutableDictionary
                     let startDateFormatter = DateFormatter()
@@ -269,10 +284,8 @@ class ChapterHomeViewController: UIDGuardedViewController {
                     let dateNumber = dateFormatter.string(from: date!)
                     let month = monthFormatter.string(from: date!)
                     self.events.append(Event(name: eventDataDictionary.value(forKey: "name") as! String, date: dateNumber, month: month, uid: eventUID as! String))
-                    print("appending")
                 }
                 eventLoaded = true
-                print("event " + String(eventLoaded) + " meeting " + String(meetingLoaded))
                 if(eventLoaded && meetingLoaded) {
                     if(self.events.count == 0) {
                         self.events.append(Event(name: "none", date: "", month: "", uid: "none"))
@@ -285,7 +298,6 @@ class ChapterHomeViewController: UIDGuardedViewController {
                 }
             } else {
                 eventLoaded = true
-                print("event " + String(eventLoaded) + " meeting " + String(meetingLoaded))
                 if(eventLoaded && meetingLoaded) {
                     if(self.events.count == 0) {
                         self.events.append(Event(name: "none", date: "", month: "", uid: "none"))
@@ -352,8 +364,8 @@ extension ChapterHomeViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventCollectionViewCell", for: indexPath) as! EventCollectionViewCell
-        print(events.count)
         if collectionView == eventsCollectionView {
+            print("New cell")
             cell.nameLabel.text = events[indexPath.item].name
             cell.dateLabel.text = events[indexPath.item].date
             cell.monthLabel.text = events[indexPath.item].month
