@@ -110,7 +110,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AnnouncementTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnnouncementTableViewCell" rowHeight="100" id="qeM-2Q-1dp" customClass="AnnouncementTableViewCell" customModule="FBLAApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AnnouncementTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnnouncementTableViewCell" rowHeight="100" id="qeM-2Q-1dp" customClass="AnnouncementTableViewCell" customModule="Oasis" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="338" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qeM-2Q-1dp" id="Ocb-p3-Ei4">
@@ -276,7 +276,7 @@
                                 <rect key="frame" x="50" y="220.5" width="314" height="591.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentAttendenceTableViewCell" rowHeight="85" id="07w-LY-f3h" customClass="StudentAttendenceTableViewCell" customModule="FBLAApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentAttendenceTableViewCell" rowHeight="85" id="07w-LY-f3h" customClass="StudentAttendenceTableViewCell" customModule="Oasis" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="314" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="07w-LY-f3h" id="EX3-Ba-cs4">
@@ -591,11 +591,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9dC-am-KCw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="250" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9dC-am-KCw">
                                 <rect key="frame" x="50" y="191" width="314" height="621"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QATableViewCell" rowHeight="200" id="dKV-6n-iIN" customClass="QATableViewCell" customModule="FBLAApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QATableViewCell" rowHeight="200" id="dKV-6n-iIN" customClass="QATableViewCell" customModule="Oasis" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="314" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dKV-6n-iIN" id="a2g-zy-kNo">
@@ -606,13 +606,13 @@
                                                     <rect key="frame" x="12" y="12" width="290" height="176"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZQ-Pb-O9O">
-                                                            <rect key="frame" x="5" y="88" width="280" height="83"/>
+                                                            <rect key="frame" x="5" y="66.5" width="280" height="104.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTd-de-ZSb">
-                                                            <rect key="frame" x="5" y="5" width="280" height="83"/>
+                                                            <rect key="frame" x="5" y="5" width="280" height="61.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -623,7 +623,7 @@
                                                         <constraint firstItem="aTd-de-ZSb" firstAttribute="leading" secondItem="0ZD-1L-Xjn" secondAttribute="leading" constant="5" id="42M-de-4W9"/>
                                                         <constraint firstAttribute="bottom" secondItem="fZQ-Pb-O9O" secondAttribute="bottom" constant="5" id="J4z-UP-8EM"/>
                                                         <constraint firstAttribute="trailing" secondItem="fZQ-Pb-O9O" secondAttribute="trailing" constant="5" id="K15-po-n8J"/>
-                                                        <constraint firstItem="fZQ-Pb-O9O" firstAttribute="height" secondItem="aTd-de-ZSb" secondAttribute="height" id="PoA-nj-DHH"/>
+                                                        <constraint firstItem="fZQ-Pb-O9O" firstAttribute="height" secondItem="aTd-de-ZSb" secondAttribute="height" multiplier="1.7" id="PoA-nj-DHH"/>
                                                         <constraint firstItem="aTd-de-ZSb" firstAttribute="top" secondItem="0ZD-1L-Xjn" secondAttribute="top" constant="5" id="ZbK-k3-SjA"/>
                                                         <constraint firstAttribute="trailing" secondItem="aTd-de-ZSb" secondAttribute="trailing" constant="5" id="bJn-5q-akC"/>
                                                         <constraint firstItem="fZQ-Pb-O9O" firstAttribute="top" secondItem="aTd-de-ZSb" secondAttribute="bottom" id="djK-Wl-W8C"/>
@@ -699,7 +699,7 @@
                                 <rect key="frame" x="50" y="190.5" width="314" height="621.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LinkTableViewCell" rowHeight="90" id="UiM-nn-Y2q" customClass="LinkTableViewCell" customModule="FBLAApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LinkTableViewCell" rowHeight="90" id="UiM-nn-Y2q" customClass="LinkTableViewCell" customModule="Oasis" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="314" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UiM-nn-Y2q" id="evW-jh-rY9">

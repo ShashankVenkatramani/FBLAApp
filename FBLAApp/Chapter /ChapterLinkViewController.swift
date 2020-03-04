@@ -241,6 +241,20 @@ extension ChapterLinkViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let link = links[indexPath.row].link
-        UIApplication.shared.open(URL(string: link as! String)!)
+        guard let url = URL(string: link as! String) else {
+            let alert = UIAlertController(title: "URL Error", message: "Could not load URL", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {_ in
+            }))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        if(UIApplication.shared.canOpenURL(url)) {
+            UIApplication.shared.open(url)
+        } else {
+            let alert = UIAlertController(title: "URL Error", message: "The link set by your chapter organizers is not able to load", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {_ in
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }

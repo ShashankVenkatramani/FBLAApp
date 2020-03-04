@@ -89,6 +89,12 @@ class RegisterUserViewController: UIViewController {
             }
         }
     }
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
+    }
     @IBAction func goToLoginButtonPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
