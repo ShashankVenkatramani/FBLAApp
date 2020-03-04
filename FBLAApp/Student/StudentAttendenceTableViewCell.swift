@@ -11,6 +11,7 @@ import UIKit
 class StudentAttendenceTableViewCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var descLabel: UILabel!
+    @IBOutlet var customizeView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

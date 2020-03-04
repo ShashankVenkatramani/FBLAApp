@@ -274,11 +274,23 @@ extension StudentsRequestsViewController : UITableViewDelegate, UITableViewDataS
         if tableView == requestsTableView {
             let cell = requestsTableView.dequeueReusableCell(withIdentifier: "RequestTableViewCell") as! RequestTableViewCell
             cell.studentLabel.text = requests[indexPath.row]["name"] as! String
+            cell.customizeView.layer.cornerRadius = 10
+            
+            cell.layer.shadowColor = Colors.blue.cgColor
+            cell.layer.shadowOffset = CGSize(width: 2, height: 2)
+            cell.layer.shadowRadius = 6
+            cell.layer.shadowOpacity = 1
             return cell
         } else {
             let cell = studentsTableView.dequeueReusableCell(withIdentifier: "StudentTableViewCell") as! StudentTableViewCell
             print(students[indexPath.row])
             cell.studentLabel.text = students[indexPath.row]["name"] as! String
+            cell.customizeView.layer.cornerRadius = 10
+            
+            cell.layer.shadowColor = Colors.orange.cgColor
+            cell.layer.shadowOffset = CGSize(width: 2, height: 2)
+            cell.layer.shadowRadius = 6
+            cell.layer.shadowOpacity = 1
             return cell
         }
     }

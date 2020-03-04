@@ -253,6 +253,14 @@ extension StudentAttendenceViewController: UITableViewDataSource, UITableViewDel
         let cell = attendenceTableView.dequeueReusableCell(withIdentifier: "StudentAttendenceTableViewCell") as! StudentAttendenceTableViewCell
         cell.nameLabel.text = attendenceRecords[indexPath.row].name
         cell.descLabel.text = attendenceRecords[indexPath.row].desc
+        
+        cell.customizeView.layer.cornerRadius = 10
+        
+        cell.layer.shadowColor = Colors.purple.cgColor
+        cell.layer.shadowOffset = CGSize(width: 2, height: 2)
+        cell.layer.shadowRadius = 6
+        cell.layer.shadowOpacity = 1
+        
         return cell
     }
     

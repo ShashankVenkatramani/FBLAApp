@@ -253,11 +253,16 @@ class StudentHomeViewController: UIDGuardedViewController {
                     
                     let dateNumber = dateFormatter.string(from: date!)
                     let month = monthFormatter.string(from: date!)
-                    self.events.append(Event(name: eventDataDictionary.value(forKey: "name") as! String, date: dateNumber, month: month, uid: eventUID as! String))
+                    self.events.append(Event(name: eventDataDictionary.value(forKey: "name") as! String, date: dateNumber, month: month, uid: eventUID as! String, rawDate: date!))
                 }
+                self.orderEventsByDate()
                 self.eventsCollectionView.reloadData()
             }
         }
+    }
+    
+    func orderEventsByDate() {
+        events = events.sorted(by: {$0.rawDate.compare($1.rawDate) == .orderedAscending})
     }
     
     override func viewWillLayoutSubviews() {

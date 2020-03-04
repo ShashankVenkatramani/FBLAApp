@@ -11,6 +11,7 @@ import UIKit
 class StudentTableViewCell: UITableViewCell {
 
     @IBOutlet var studentLabel: UILabel!
+    @IBOutlet var customizeView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

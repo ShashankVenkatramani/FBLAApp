@@ -227,6 +227,14 @@ extension StudentOfficerViewController: UITableViewDelegate, UITableViewDataSour
         let cell = officersTableView.dequeueReusableCell(withIdentifier: "OfficerTableViewCell") as! OfficerTableViewCell
         cell.nameTextField.text = officers[indexPath.row].name
         cell.positionTextField.text = officers[indexPath.row].position
+        
+        cell.customView.layer.cornerRadius = 10
+        
+        cell.layer.shadowColor = Colors.purple.cgColor
+        cell.layer.shadowOffset = CGSize(width: 2, height: 2)
+        cell.layer.shadowRadius = 6
+        cell.layer.shadowOpacity = 1
+        
         return cell
     }
 }
